@@ -1,8 +1,11 @@
 package com.example.demo.entity;
 
 public class Bed {
+    //类型编号
     Integer bedId;
-    String bedtype;
+    //类型名称
+    String bedType;
+    //信息编号
     Integer hmld;
 
     public Bed() {
@@ -18,11 +21,11 @@ public class Bed {
     }
 
     public String getBedtype() {
-        return bedtype;
+        return bedType;
     }
 
     public void setBedtype(String bedtype) {
-        this.bedtype = bedtype;
+        this.bedType = bedtype;
     }
 
     public Integer getHmld() {
@@ -37,7 +40,7 @@ public class Bed {
     public String toString() {
         return "Bed{" +
                 "bedId=" + bedId +
-                ", bedtype='" + bedtype + '\'' +
+                ", bedtype='" + bedType + '\'' +
                 ", hmld=" + hmld +
                 '}';
     }
