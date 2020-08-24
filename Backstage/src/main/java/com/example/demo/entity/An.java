@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import java.util.List;
+
 public class An {
     //账号编号
     Integer anId;
