@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
-@RequestMapping("User")
+@RequestMapping("An")
 public class AnController {
     @Resource
     AnDao ad;
