@@ -17,6 +17,7 @@ public class AnController {
     @RequestMapping("query")
     public List<An> query(String annumber, String anpassword){
         List<An> list = ad.query(annumber, anpassword);
+        System.out.println();
         return list;
     }
 }
