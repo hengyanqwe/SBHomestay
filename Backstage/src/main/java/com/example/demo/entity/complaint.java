@@ -3,10 +3,15 @@ package com.example.demo.entity;
 import java.sql.Time;
 
 public class complaint {
+    //投诉编号
     Integer comId;
+    //投诉人
     Integer userId;
+    //房源编号
     Integer houseId;
+    //投诉日期
     Time comDate;
+    //投诉内容
     String comContent;
 
     public complaint() {
