@@ -1,12 +1,12 @@
 package com.example.demo.entity;
 
-public class User {
+public class An {
     Integer anid;
     String annumber;
     String anpassword;
     Integer postid;
 
-    public User() {
+    public An() {
         super();
     }
 
