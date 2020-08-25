@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dao.StaffDao;
 import com.example.demo.entity.Staff;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -10,6 +11,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
+@CrossOrigin
 @RequestMapping("Staff")
 public class StaffController {
     @Resource
