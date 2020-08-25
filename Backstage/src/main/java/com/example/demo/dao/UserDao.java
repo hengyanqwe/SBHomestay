@@ -9,6 +9,8 @@ import java.util.List;
 public interface UserDao {
     @Select("select * from user")
     List<User> query();
+    @Select("select COUNT(userId) from user where userPhone = #{uname} and userPwd = #{upwd}")
+    int loginNamePwd(@Param("uname") String userPhone, @Param("upwd") String userPwd);
     @Select("select * from user where gaId = #{gaId}")
     List<User> gaquery(Integer gaId);
     @Select("select * from user where hmId = #{hmId}")
