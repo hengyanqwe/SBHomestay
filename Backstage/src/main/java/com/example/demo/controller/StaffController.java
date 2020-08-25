@@ -22,6 +22,13 @@ public class StaffController {
         return list;
     }
 
+    @RequestMapping("postquery")
+    @ResponseBody
+    public List<Staff> postquery(Integer postId){
+        List<Staff> list = staffDao.postquery(postId);
+        return list;
+    }
+
     @RequestMapping("add")
     @ResponseBody
     public int addStaff(Staff staff){

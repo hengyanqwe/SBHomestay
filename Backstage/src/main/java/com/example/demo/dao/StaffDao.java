@@ -9,6 +9,8 @@ import java.util.List;
 public interface StaffDao {
     @Select("select * from staff")
     List<Staff> query();
+    @Select("select * from staff where postId = #{postId}")
+    List<Staff> postquery(Integer postId);
     @Delete("delete from staff where staffid = #{staffid}")
     int del(@Param("staffid") Integer staffid);
     @Insert("insert into staff (staffName,postId) values(#{staffName},#{postId})")
