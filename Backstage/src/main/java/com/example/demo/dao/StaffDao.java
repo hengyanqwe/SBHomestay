@@ -17,9 +17,12 @@ public interface StaffDao {
     @Delete("delete from staff where staffid = #{staffid}")
     int del(@Param("staffid") Integer staffid);
 //    添加职员
-    @Insert("insert into staff (staffName,postId) values(#{staffName},#{postId})")
+    @Insert("insert into staff (staffName,postId,idcard) values(#{staffName},#{postId},#{idcard})")
     int addStaff(@Param("staff") Staff staff);
+//    更改状态
+    @Update("update staff set state = #{state} where staffid = #{staffid}")
+    int stateupdate(@Param("staff") Staff staff);
 //    更改信息
-    @Update("update staff set staffName = #{staffName},postId = #{postId} where staffid = #{staffid}")
+    @Update("update staff set staffName = #{staffName},postId = #{postId},idcard = #{idcard} where staffid = #{staffid}")
     int update(@Param("staff") Staff staff);
 }

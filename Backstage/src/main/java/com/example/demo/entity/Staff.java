@@ -8,6 +8,26 @@ public class Staff {
     String staffname;
 //    职位编号
     Integer postid;
+//    身份证号
+    String idcard;
+//    是否在职
+    Integer state;
+
+    public String getIdcard() {
+        return idcard;
+    }
+
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 
     public Integer getStaffid() {
         return staffid;
@@ -39,6 +59,8 @@ public class Staff {
                 "staffid=" + staffid +
                 ", staffname='" + staffname + '\'' +
                 ", postid=" + postid +
+                ", idcard='" + idcard + '\'' +
+                ", state=" + state +
                 '}';
     }
 }
