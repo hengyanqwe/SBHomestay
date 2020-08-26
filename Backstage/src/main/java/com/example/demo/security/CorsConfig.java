@@ -29,7 +29,7 @@ public class CorsConfig {
         corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.addAllowedHeader("*");
         // 允许访问的请求方式
-        corsConfiguration.addAllowedMethod("POST");
+        corsConfiguration.addAllowedMethod("*");
         // corsConfiguration.setAllowedMethods(Arrays.asList("POST","GET"));
 
         // 基于请求路径的跨域解析
