@@ -20,7 +20,7 @@ public class CorsConfig {
     @Bean
     @Order("0")
     public CorsFilter corsFilter(){
-        System.out.println("1111");
+        System.out.println("111");
         // 跨域请求配置对象
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         // 允许请求携带验证信息
