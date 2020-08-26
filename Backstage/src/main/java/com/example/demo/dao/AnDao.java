@@ -10,7 +10,6 @@ import java.util.List;
 @Mapper
 public interface AnDao extends tk.mybatis.mapper.common.Mapper<An> {
 
-    //
     @Select("select * from an where anNumber=#{AnNumber};")
     public An ByAnNumber(String AnNumber);
     @Select("select * from an;")
