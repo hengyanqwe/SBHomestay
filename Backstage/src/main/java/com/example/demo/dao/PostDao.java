@@ -12,11 +12,11 @@ public interface PostDao {
     List<Post> query();
 //    删除职位
     @Delete("delete from post where postId = #{postId}")
-    int del(@Param("postId") Integer postId);
+    int del(Integer postId);
 //    添加职位
     @Insert("insert into post (postName) values(#{postName})")
-    int addPost(@Param("post") Post post);
+    int addPost(Post post);
 //    更改职位信息
     @Update("update post set postName = #{post.postName} where postId = #{post.postId}")
-    int update(@Param("post") Post post);
+    int update(Post post);
 }

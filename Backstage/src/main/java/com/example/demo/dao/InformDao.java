@@ -12,9 +12,9 @@ public interface InformDao {
     List<Inform> peoplequery();
 //    删除通知（前台）
     @Delete("delete from inform where informId = #{informId}")
-    int del(@Param("informId") Integer informId);
+    int del(Integer informId);
 //    添加通知（后台）
     @Insert("insert into inform (informTitle,informContent,informDate,informPeople) values" +
             "(#{informTitle},#{informContent},#{informDate},#{informPeople})")
-    int addInform(@Param("inform") Inform inform);
+    int addInform(Inform inform);
 }

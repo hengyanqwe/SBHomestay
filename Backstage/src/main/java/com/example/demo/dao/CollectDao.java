@@ -15,8 +15,8 @@ public interface CollectDao {
     List<Collect> cgquery(Integer cgId);
 //    取消收藏
     @Delete("delete from collect where collectId = #{collectId}")
-    int del(@Param("collectId") Integer collectId);
+    int del(Integer collectId);
 //    添加收藏
     @Insert("insert into collect (hmId,userId,cgId) values (#{hmId},#{userId},#{cgId})")
-    int addCollect(@Param("collect") Collect collect);
+    int addCollect(Collect collect);
 }

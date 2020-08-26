@@ -15,14 +15,14 @@ public interface StaffDao {
     List<Staff> postquery(Integer postId);
 //    开除职员
     @Delete("delete from staff where staffid = #{staffid}")
-    int del(@Param("staffid") Integer staffid);
+    int del(Integer staffid);
 //    添加职员
     @Insert("insert into staff (staffName,postId,idcard) values(#{staffName},#{postId},#{idcard})")
-    int addStaff(@Param("staff") Staff staff);
+    int addStaff(Staff staff);
 //    更改状态
     @Update("update staff set state = #{state} where staffid = #{staffid}")
-    int stateupdate(@Param("staff") Staff staff);
+    int stateupdate(Staff staff);
 //    更改信息
-    @Update("update staff set staffName = #{staffName},postId = #{postId},idcard = #{idcard} where staffid = #{staffid}")
-    int update(@Param("staff") Staff staff);
+    @Update("update staff set staffName = #{staffName},postId = #{postId},idcard = #{idcard},state = #{state} where staffid = #{staffid}")
+    int update(Staff staff);
 }

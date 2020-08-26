@@ -21,14 +21,14 @@ public interface UserDao {
     List<User> hmquery(Integer hmId);
 //    注销账号
     @Delete("delete from user where userId = #{userId}")
-    int del(@Param("userId") Integer userId);
+    int del(Integer userId);
 //    注册
     @Insert("insert into user (userName,userPhone,userPwd) values (#{userName},#{userPhone},#{userPwd})")
-    int addUser(@Param("user") User user);
+    int addUser(User user);
 //    更改用户信息
     @Update("update user set userName = #{userName},userIcon = #{userIcon},userPhone = #{userPhone},userPwd = #{userPwd}," +
             "userNames = #{userNames},userIcard = #{userIcard},userSex = #{userSex},userDatebirth = #{userDatebirth}," +
             "userAddress = #{userAddress},userBloodtype = #{userBloodtype},userTeach = #{userTeache}," +
             "userWork = #{userWork},hmId = #{hmId},gaId = #{gaId} where userId = #{userId}")
-    int update(@Param("user") User user);
+    int update(User user);
 }

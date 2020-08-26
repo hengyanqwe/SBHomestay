@@ -15,11 +15,11 @@ public interface GaDao {
     List<ga> typequery();
 //    删除此收款方式
     @Delete("delete from ga where gaId = #{gaId}")
-    int del(@Param("gaId") Integer gaId);
+    int del(Integer gaId);
 //    添加收款方式
     @Insert("insert into ga (gaIcard,gaTypeId) values (#{gaIcard},#{gaTypeId})")
-    int addGa(@Param("ga") ga ga);
+    int addGa(ga ga);
 //    修改收款方式
     @Update("update ga set gaIcard = #{gaIcard},gaTypeId = #{gaTypeId} where gaId = #{gaId}")
-    int update(@Param("ga") ga ga);
+    int update(ga ga);
 }

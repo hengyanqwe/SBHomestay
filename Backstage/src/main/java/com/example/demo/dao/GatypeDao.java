@@ -12,11 +12,11 @@ public interface GatypeDao {
     List<gaType> query();
 //    删除此类型
     @Delete("delete from gatype where gaTypeId = #{gaTypeId}")
-    int del(@Param("gaTypeId") Integer gaTypeId);
+    int del(Integer gaTypeId);
 //    添加类型
     @Insert("insert into gatype (gaTypeName) values (#{gaTypeName})")
-    int addGatype(@Param("gatype") gaType gaType);
+    int addGatype(gaType gaType);
 //    修改类型
     @Update("update gatype set gaTypeName = #{gaTypeName} where gaTypeId = #{gaTypeId}")
-    int update(@Param("gatype") gaType gaType);
+    int update(gaType gaType);
 }

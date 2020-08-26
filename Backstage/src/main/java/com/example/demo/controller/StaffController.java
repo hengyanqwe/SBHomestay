@@ -47,8 +47,16 @@ public class StaffController {
 
     @RequestMapping("update")
     @ResponseBody
-    public int update(Staff staff){
-        int i =staffDao.update(staff);
+    public void update(Staff staff){
+        System.out.println(staff);
+        staffDao.update(staff);
+        //return i;
+    }
+
+    @RequestMapping("stateupdate")
+    @ResponseBody
+    public int stateupdate(Staff staff){
+        int i =staffDao.stateupdate(staff);
         return i;
     }
 }

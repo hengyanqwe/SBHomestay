@@ -15,13 +15,13 @@ public interface SpecialDao {
     List<Special> housequery();
 //    删除特殊价格
     @Delete("delete from special where specialId = #{specialId}")
-    int del(@Param("specialId") Integer specialId);
+    int del(Integer specialId);
 //    添加
     @Insert("insert into special (specialPrice,specialDate,houseId,specialStop) values" +
             "(#{specialPrice},#{specialDate},#{houseId},#{specialStop})")
-    int addSpecial(@Param("special") Special special);
+    int addSpecial(Special special);
 //    更改信息
     @Update("update special set specialPrice = #{specialPrece}, specialDate = #{specialDate}," +
             "houseId = #{houseId},specialStop = #{specialStop} where specialId = #{specialId}")
-    int update(@Param("special") Special special);
+    int update(Special special);
 }

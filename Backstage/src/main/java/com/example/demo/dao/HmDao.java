@@ -18,14 +18,14 @@ public interface HmDao {
     List<Hm> htquery(Integer htId);
 //    （下架）删除房源
     @Delete("delete from hm where hmId = #{hmId}")
-    int del(@Param("hmId") Integer hmId);
+    int del(Integer hmId);
 //    添加房源信息
     @Insert("insert into hm (hmRegion,hmAddress,hmNumber,hmtypeId,hmRo,hmToilet,hmBed,hmPeople,houseId,htId) values" +
             "(#{hmRegion},#{hmAddress},#{hmNumber},#{hmtypeId},#{hmtypeId},#{hmRo},#{hmToilet},#{hmBed},#{hmPeople},#{houseId},#{htId})")
-    int addHm(@Param("hm") Hm hm);
+    int addHm(Hm hm);
 //    更改
     @Update("update hm set hmRegion = #{hmRegion},hmAddress = #{hmAddress},hmNumber = #{hmNumber},hmtypeId = #{hmtypeId}," +
             "hmRo = #{hmRo},hmToilet = #{hmToilet},hmBed = #{hmBed},hmPeople = #{hmPeople},houseId = #{houseId},htId = #{htId}" +
             "where hmId = #{hmId}")
-    int update(@Param("hm") Hm hm);
+    int update(Hm hm);
 }

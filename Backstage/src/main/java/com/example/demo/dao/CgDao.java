@@ -12,12 +12,12 @@ public interface CgDao {
     List<Cg> query();
 //    删除收藏分组
     @Delete("delete from cg where cgId = #{cgId}")
-    int del(@Param("cgId") Integer cgId);
+    int del(Integer cgId);
 //    添加收藏分组
     @Insert("insert into cg (cgName,cgMessage) values" +
             "(#{cgName},#{cgMessage})")
-    int addCg(@Param("cg") Cg cg);
+    int addCg(Cg cg);
 //    更改分组信息
     @Update("update cg set cgName = #{cgName},cgMessage = #{cgMessage} where cgId = #{cgId}")
-    int update(@Param("cg") Cg cg);
+    int update(Cg cg);
 }
