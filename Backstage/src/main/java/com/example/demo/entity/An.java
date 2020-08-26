@@ -1,8 +1,12 @@
 package com.example.demo.entity;
 
-import java.util.List;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.UserDetails;
 
-public class An {
+import java.util.Collection;
+
+public class An implements UserDetails {
     //账号编号
     Integer anId;
     //账号
@@ -12,8 +16,10 @@ public class An {
     //职员编号
     Integer postId;
 
-    public An() {
-        super();
+    public An() {}
+
+    public An(String anNumber) {
+        this.anNumber = anNumber;
     }
 
     public Integer getAnId() {
@@ -56,5 +62,41 @@ public class An {
                 ", anPassword='" + anPassword + '\'' +
                 ", postId=" + postId +
                 '}';
+    }
+
+    //获取授权信息(权限)
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
+    //获取用户密码
+    @Override
+    public String getPassword() {
+        return this.anPassword;
+    }
+    //获取用户账号
+    @Override
+    public String getUsername() {
+        return anNumber;
+    }
+    //当前账户是否过期
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+    //当前账户是否被锁定
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+    //当前账户认证是否过期
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+    //当前账户是否禁用
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 }
