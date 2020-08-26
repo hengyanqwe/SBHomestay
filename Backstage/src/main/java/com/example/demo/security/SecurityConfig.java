@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import javax.annotation.Resource;
 
 
-//将当前作为配置类
+//将当前作为配置类1111
 @Configuration
 //使用security
 @EnableWebSecurity

@@ -12,6 +12,7 @@ public class AnService {
     @Resource
     AnDao ad;
 
+    //按编号查找
     public An ByAnNumber(String AnNumber){
         return ad.ByAnNumber(AnNumber);
     }

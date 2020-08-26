@@ -31,19 +31,4 @@ public class AnController {
     public String failure(){
         return "error";
     }
-    @ResponseBody
-    @RequestMapping("getAn1")
-    public Object getAn1(){
-        return SecurityContextHolder.getContext().getAuthentication();
-    }
-    @ResponseBody
-    @RequestMapping("getAn2")
-    public Object getAn2(Authentication authentication){
-        return authentication;
-    }
-    @ResponseBody
-    @RequestMapping("getAn3")
-    public Object getAn3(Principal principal){
-        return principal;
-    }
 }
