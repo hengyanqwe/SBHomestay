@@ -5,9 +5,29 @@ public class Staff {
 //    职员编号
     Integer staffid;
 //    职员名称
-    String staffname;
+    String staffName;
 //    职位编号
-    Integer postid;
+    Integer postId;
+//    身份证号
+    String idcard;
+//    是否在职
+    Integer state;
+
+    public String getIdcard() {
+        return idcard;
+    }
+
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 
     public Integer getStaffid() {
         return staffid;
@@ -17,28 +37,30 @@ public class Staff {
         this.staffid = staffid;
     }
 
-    public String getStaffname() {
-        return staffname;
+    public String getStaffName() {
+        return staffName;
     }
 
-    public void setStaffname(String staffname) {
-        this.staffname = staffname;
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
     }
 
-    public Integer getPostid() {
-        return postid;
+    public Integer getPostId() {
+        return postId;
     }
 
-    public void setPostid(Integer postid) {
-        this.postid = postid;
+    public void setPostId(Integer postId) {
+        this.postId = postId;
     }
 
     @Override
     public String toString() {
         return "Staff{" +
                 "staffid=" + staffid +
-                ", staffname='" + staffname + '\'' +
-                ", postid=" + postid +
+                ", staffName='" + staffName + '\'' +
+                ", postId=" + postId +
+                ", idcard='" + idcard + '\'' +
+                ", state=" + state +
                 '}';
     }
 }

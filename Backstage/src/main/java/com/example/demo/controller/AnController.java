@@ -5,6 +5,7 @@ import com.example.demo.entity.An;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -13,6 +14,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
+@CrossOrigin
 @RequestMapping("An")
 public class AnController {
     @Resource
