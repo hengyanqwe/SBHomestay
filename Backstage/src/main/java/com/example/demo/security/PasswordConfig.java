@@ -9,7 +9,7 @@ public class PasswordConfig implements org.springframework.security.crypto.passw
     //charSequence:表单提交的密码
     @Override
     public String encode(CharSequence charSequence) {
-        return charSequence.toString();
+        return null;
     }
     //匹配
     //用户的真实密码
