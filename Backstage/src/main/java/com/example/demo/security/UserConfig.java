@@ -15,7 +15,7 @@ public class UserConfig implements UserDetailsService {
     AnService as;
 
     /**
-     * 根据用户名获取用户信息1111
+     * 根据用户名获取用户信息
      * @param s 表单提交的用户名
      * @return 用户详细信息
      * @throws UsernameNotFoundException
