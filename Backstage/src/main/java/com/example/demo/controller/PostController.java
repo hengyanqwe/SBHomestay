@@ -21,7 +21,6 @@ public class PostController {
     @ResponseBody
     public List<Post> query(){
         List<Post> list = pd.query();
-        System.out.println(list);
         return list;
     }
 

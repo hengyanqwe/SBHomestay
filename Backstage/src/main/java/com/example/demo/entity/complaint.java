@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import java.sql.Date;
 import java.sql.Time;
 
 public class complaint {
@@ -10,7 +11,7 @@ public class complaint {
     //房源编号
     Integer houseId;
     //投诉日期
-    Time comDate;
+    Date comDate;
     //投诉内容
     String comContent;
 
@@ -42,11 +43,11 @@ public class complaint {
         this.houseId = houseId;
     }
 
-    public Time getComDate() {
+    public Date getComDate() {
         return comDate;
     }
 
-    public void setComDate(Time comDate) {
+    public void setComDate(Date comDate) {
         this.comDate = comDate;
     }
 

@@ -15,8 +15,8 @@ public interface ComplaintDao {
     List<complaint> query();
 //    根据用户查看投诉
     @Select("select * from complaint where userId = #{userId}")
-    List<complaint> userquery();
+    List<complaint> userquery(Integer userId);
 //    查看房源投诉
     @Select("select * from complaint where houseId = #{houseId}")
-    List<complaint> housequery();
+    List<complaint> housequery(Integer houseId);
 }
