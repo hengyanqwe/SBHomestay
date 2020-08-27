@@ -18,7 +18,7 @@ public class CorsConfig {
      * @return
      */
     private CorsConfiguration bulidConfig(){
-        // 跨域请求配置对象
+        // 跨域请求配置对象11
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         // 允许请求域名,表示对所有地址都可以访问额
         corsConfiguration.addAllowedOrigin("*");
