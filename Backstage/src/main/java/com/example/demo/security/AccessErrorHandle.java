@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 @Component
 public class AccessErrorHandle implements AccessDeniedHandler {
-//1
+//111111
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
         System.out.println(e.getClass());
