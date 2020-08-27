@@ -17,26 +17,27 @@ public class CorsConfig {
      * 配置跨域过滤器
      * @return
      */
-    @Bean
-    @Order("0")
-    public CorsFilter corsFilter(){
-        System.out.println("11");
+    private CorsConfiguration bulidConfig(){
         // 跨域请求配置对象
         CorsConfiguration corsConfiguration = new CorsConfiguration();
+        // 允许请求域名,表示对所有地址都可以访问额
+        corsConfiguration.addAllowedOrigin("*");
+        //跨域的请求头
+        corsConfiguration.addAllowedHeader("*");
+        // 跨域的请求方式
+        corsConfiguration.addAllowedMethod("*");
         // 允许请求携带验证信息
         corsConfiguration.setAllowCredentials(true);
-        // 允许请求域名
-        corsConfiguration.addAllowedOrigin("*");
-        corsConfiguration.addAllowedHeader("*");
-        // 允许访问的请求方式
-        corsConfiguration.addAllowedMethod("*");
-        // corsConfiguration.setAllowedMethods(Arrays.asList("POST","GET"));
-
         // 基于请求路径的跨域解析
-        UrlBasedCorsConfigurationSource corsConfigurationSource = new UrlBasedCorsConfigurationSource();
-        corsConfigurationSource.registerCorsConfiguration("/**",corsConfiguration);
-        return new CorsFilter(corsConfigurationSource);
+        return corsConfiguration;
 
+    }
+
+    @Bean
+    public CorsFilter corsFilter(){
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**",bulidConfig());
+        return new CorsFilter(source);
     }
 
 }
