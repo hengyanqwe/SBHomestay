@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Iterator;
-
 /**
  * @Author: Galen
  * @Date: 2019/3/27-16:59
