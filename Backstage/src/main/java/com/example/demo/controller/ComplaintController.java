@@ -21,7 +21,6 @@ public class ComplaintController {
     @ResponseBody
     public List<complaint> query(){
         List<complaint> list = complaintDao.query();
-        System.out.println(list);
         return list;
     }
 

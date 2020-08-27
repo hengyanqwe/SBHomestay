@@ -11,8 +11,8 @@ public interface UserDao {
     @Select("select * from user")
     List<User> query();
 //    根据账号查询（前台）
-    @Select("select COUNT(userId) from user where userPhone = #{uname} and userPwd = #{upwd}")
-    int loginNamePwd(@Param("uname") String userPhone, @Param("upwd") String userPwd);
+    @Select("select * from user where userPhone = #{userPhone}")
+    List<User> phonequery(String userPhone);
 //    根据收款编号查看
     @Select("select * from user where gaId = #{gaId}")
     List<User> gaquery(Integer gaId);

@@ -11,7 +11,7 @@ public class User {
 //    头像
     String userIcon;
 //    手机号码
-    Integer userPhone;
+    String  userPhone;
 //    密码
     String userPwd;
 //    真实姓名
@@ -59,11 +59,11 @@ public class User {
         this.userIcon = userIcon;
     }
 
-    public Integer getUserPhone() {
+    public String getUserPhone() {
         return userPhone;
     }
 
-    public void setUserPhone(Integer userPhone) {
+    public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
 
@@ -161,7 +161,7 @@ public class User {
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", userIcon='" + userIcon + '\'' +
-                ", userPhone=" + userPhone +
+                ", userPhone='" + userPhone + '\'' +
                 ", userPwd='" + userPwd + '\'' +
                 ", userNames='" + userNames + '\'' +
                 ", userIcard=" + userIcard +
