@@ -17,21 +17,21 @@ import java.util.List;
 public class StaffController {
     @Resource
     StaffDao staffDao;
-    @Secured("ROLE_Query")
+    @Secured("ROLE_Staff_Query")
     @RequestMapping("query")
     @ResponseBody
     public List<Staff> query(){
         List<Staff> list = staffDao.query();
         return list;
     }
-
+    @Secured("ROLE_Staff_postquery")
     @RequestMapping("postquery")
     @ResponseBody
     public List<Staff> postquery(Integer postId){
         List<Staff> list = staffDao.postquery(postId);
         return list;
     }
-
+    @Secured("ROLE_Staff_add")
     @RequestMapping("add")
     @ResponseBody
     public int addStaff(Staff staff){

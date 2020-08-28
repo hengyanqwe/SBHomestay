@@ -17,15 +17,60 @@ public class AnController {
     @Resource
     AnDao ad;
 
+    /**
+     * 按编号查询
+     * @param anNumber
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("ByAnNumber")
+    public An ByAnNumber(String anNumber){
+        return ad.ByAnNumber(anNumber);
+    }
+
+    /**
+     * 查询
+     * @return
+     */
     @ResponseBody
     @RequestMapping("query")
-    public List<An> query(String anNumber){
-        List<An> list = ad.query(anNumber);
-        return list;
+    public List<An> query(){
+        System.out.println(ad.query());
+        return ad.query();
     }
+
+    /**
+     * 添加
+     * @param an
+     * @return
+     */
     @ResponseBody
-    @RequestMapping("failure")
-    public String failure(){
-        return "error";
+    @RequestMapping("add")
+    public int add(An an){
+        System.out.println(an);
+        return ad.add(an);
+    }
+
+    /**
+     * 修改
+     * @param an
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("update")
+    public void udpate(An an){
+        System.out.println(an);
+        ad.update(an);
+    }
+
+    /**
+     * 删除
+     * @param anId
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("delete")
+    public void delete(Integer anId){
+        ad.del(anId);
     }
 }

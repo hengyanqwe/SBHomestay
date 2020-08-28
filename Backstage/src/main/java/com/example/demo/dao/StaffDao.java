@@ -11,7 +11,7 @@ public interface StaffDao {
     @Select("select staff.*,post.postName from staff,post where staff.postId = post.postId")
     List<Staff> query();
 //    根据职位查看
-    @Select("select post.* from staff where postId = #{postId}")
+    @Select("select post.* from post where postId = #{postId}")
     List<Staff> postquery(Integer postId);
 //    开除职员
     @Delete("delete from staff where staffid = #{staffid}")
