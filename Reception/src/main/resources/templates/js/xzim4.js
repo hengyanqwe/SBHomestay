@@ -37,17 +37,6 @@ var xiaozhuIMBootstrap= {
             this.noLoginWebIMInit();
         }
     },
-    setQRCodeText : function(switchLogin){
-      this.switchShowQrCodeFun();
-      var titleText ="",tipText="微信扫码快捷找民宿，无需下载App"
-      if(switchLogin){
-        titleText ="小程序下单享优惠";
-      }else{
-        titleText ="小程序注册送950元礼券";
-      }
-      document.getElementById("qrcode-title").innerText = titleText;
-      document.getElementById("qrcode-tip-text").innerText = tipText;
-    },
     switchShowQrCodeFun: function(){
       var opVar = this.getQueryVariable('op');
       // FangDong_
