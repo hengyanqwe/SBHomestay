@@ -12,6 +12,15 @@ public class Staff {
     String idcard;
 //    是否在职
     Integer state;
+    String postName;
+
+    public String getPostName() {
+        return postName;
+    }
+
+    public void setPostName(String postName) {
+        this.postName = postName;
+    }
 
     public String getIdcard() {
         return idcard;
@@ -61,6 +70,7 @@ public class Staff {
                 ", postId=" + postId +
                 ", idcard='" + idcard + '\'' +
                 ", state=" + state +
+                ", postName='" + postName + '\'' +
                 '}';
     }
 }

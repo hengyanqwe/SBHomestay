@@ -8,10 +8,10 @@ import java.util.List;
 @Mapper
 public interface StaffDao {
 //    查看职员
-    @Select("select * from staff")
+    @Select("select staff.*,post.postName from staff,post where staff.postId = post.postId")
     List<Staff> query();
 //    根据职位查看
-    @Select("select * from staff where postId = #{postId}")
+    @Select("select post.* from staff where postId = #{postId}")
     List<Staff> postquery(Integer postId);
 //    开除职员
     @Delete("delete from staff where staffid = #{staffid}")
