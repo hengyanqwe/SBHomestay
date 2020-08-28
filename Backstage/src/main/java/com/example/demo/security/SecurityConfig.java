@@ -1,75 +1,142 @@
 package com.example.demo.security;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
+import org.springframework.web.cors.CorsUtils;
 
 import javax.annotation.Resource;
-
-
-//将当前作为配置类
+import java.io.PrintWriter;
+/**
+ *  权限注解
+ *  prePostEnabled
+ *  securedEnabled
+ *  jsr250Enabled
+ */
+// 将当前类作为配置类使用
 @Configuration
-//使用security
+// 启用security
 @EnableWebSecurity
-//启用方法注解权限
-@EnableGlobalMethodSecurity(securedEnabled = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+// 启用方法注解权限
+@EnableGlobalMethodSecurity(securedEnabled = true,jsr250Enabled = true,prePostEnabled = true)
+public class SecurityConfig extends WebSecurityConfigurerAdapter  {
+    @Resource
+    AccessErrorHandle accessErrorHandle;
+    @Resource
+    AuthenticationErrorHandle authenticationErrorHandle;
+    /**
+     * 配置访问请求
+     *
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //使用form表单登录
+        // 使用form表单登录
         http.formLogin()
-                //登录界面
+                // 登录的form表单的提交路径
                 .loginPage("/login.html")
-                //登录的form的表单路径
                 .loginProcessingUrl("/login-check")
-                //默认成功路径：登录后有目标资源，访问目标资源，没有跳转默认成功路径
-                .defaultSuccessUrl("/home.html  ")
-                //认证失败后跳转的路径
-                .failureForwardUrl("/An/failure")
-                //用户名对应的表单属性
-                //表单提交的密码参数名称
                 .usernameParameter("anNumber")
                 .passwordParameter("anPassWord")
-                //直接访问
+               .successHandler((req, res, authentication) -> {
+                   System.out.println("访问成功");
+                    //获取数据
+                    Object principal = authentication.getPrincipal();
+                    res.setContentType("application/json;charset=utf-8");
+                    PrintWriter out = res.getWriter();
+                    out.write(new ObjectMapper().writeValueAsString(principal));
+                    out.flush();
+                    out.close();
+                })
+                // 访问失败的处理器
+                .failureHandler((req, res, e) -> {
+                     System.out.println("访问失败："+e.getMessage());
+                    res.setContentType("application/json;charset=utf-8");
+                    PrintWriter out = res.getWriter();
+                    //输出成json格式
+                    out.write("{\"message\":\""+e.getMessage()+"\"}");
+                    out.flush();
+                    out.close();
+                })
+                // 直接访问
                 .permitAll()
                 .and()
-                //授权请求：设置请求的拦截情况
+                // 授权请求：设置请求的拦截情况
                 .authorizeRequests()
-                //任意请求
+                /*.withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
+                    @Override
+                    public <O extends FilterSecurityInterceptor> O postProcess(O o) {
+                        o.setSecurityMetadataSource(filterMetadataSource);
+                        o.setAccessDecisionManager(myAccessDecisionManager);
+                        return o;
+                    }
+                })*/
+                //让Spring security放行所有preflight request
+                .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
+                //不做拦截
+                .antMatchers("/Path/*")
+                .permitAll()
+                //.antMatchers("departmentinfo/add")
+                //.permitAll()
+                // 任意请求
                 .anyRequest()
-                //认证
+                // 验证
                 .authenticated()
+                //使用自定义的权限表达式
+                //.access("@rbacConfig.hasPermission(request,authentication)")
                 .and()
-                //跨域请求
+                // 支持跨域请求
+                .cors()
+                .and()
+                // 跨域请求
                 .csrf()
-                //禁用
-                .disable();
+                // 禁用
+                .disable()
+                .authorizeRequests()
+                .and()
+                // 异常处理器
+                .exceptionHandling()
+                // 拒绝访问
+                .accessDeniedHandler(accessErrorHandle)
+                // 验证失败
+                .authenticationEntryPoint(authenticationErrorHandle);
     }
 
     @Resource
     PasswordConfig passwordConfig;
+
     @Resource
     UserConfig userConfig;
 
+
+
+    /**
+     * 配置认证(身份校验，登录)规则
+     *
+     * @param auth
+     * @throws Exception
+     */
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        System.out.println(1);
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        //密码的编码规则
-        //new BCryptPasswordEncoder():数据中保存的密码是加密后的密码
+        // 密码编码规则
+        // new BCryptPasswordEncoder();数据中保存的密码是加密之后的密码
         daoAuthenticationProvider.setPasswordEncoder(passwordConfig);
-        //用户信息的获取方式
+        // 用户信息获取方式
         daoAuthenticationProvider.setUserDetailsService(userConfig);
 
         auth.authenticationProvider(daoAuthenticationProvider);
     }
 
-    @Override
-    public void configure(WebSecurity web)throws Exception{
-        web.ignoring().antMatchers("/Path/**");
-    }
+
+
 }

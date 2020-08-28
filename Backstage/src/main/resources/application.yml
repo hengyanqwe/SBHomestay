@@ -1,7 +1,7 @@
-server:
-  port: 8080
-  servlet:
-    context-path: ''
+#server:
+#  port: 8080
+ # servlet:
+  #  context-path: ''
 
 spring:
   datasource:
@@ -9,14 +9,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123@qwe
-
-  thymeleaf:
-    # encoding: UTF-8
-    # prefix: classpath:/templates/
-    # suffix: .html
-    mode: HTML5  # 视图模型
-    cache: false # 模板缓存
-
-
   resources: # 静态资源路径
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+  thymeleaf:
+    cache: false  # 使用模板缓存
+    suffix: .html
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    mode: HTML5
