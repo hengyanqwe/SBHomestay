@@ -69,7 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
                 // 直接访问
                 .permitAll()
                 .and()
-                // 授权请求：设置请求的拦截情况
+                //授权请求：设置请求的拦截情况
                 .authorizeRequests()
                 /*.withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
                     @Override

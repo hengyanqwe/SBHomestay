@@ -1,0 +1,81 @@
+.nc-container #nc_2_wrapper,
+.nc-container.tb-login #nc_2_wrapper {
+    width: 340px
+}
+
+.nc-container .imgCaptcha,
+.nc-container .clickCaptcha {
+    width: 338px;
+}
+
+.nc-container.tb-login .imgCaptcha,
+.nc-container.tb-login .clickCaptcha {
+    width: 340px;
+}
+
+.nc-container.tb-login .imgCaptcha .captcha-error,
+.nc-container.tb-login .clickCaptcha .captcha-error {
+    width: 332px;
+}
+
+.nc-container.tb-login .errloading,
+.nc-container .errloading {
+    width: 330px;
+}
+
+.nc-container #nc_3_wrapper,
+.nc-container.tb-login #nc_3_wrapper {
+    width: 340px
+}
+
+.nc-container .imgCaptcha,
+.nc-container .clickCaptcha {
+    width: 338px;
+}
+
+.nc-container.tb-login .imgCaptcha,
+.nc-container.tb-login .clickCaptcha {
+    width: 340px;
+}
+
+.nc-container.tb-login .imgCaptcha .captcha-error,
+.nc-container.tb-login .clickCaptcha .captcha-error {
+    width: 332px;
+}
+
+.nc-container.tb-login .errloading,
+.nc-container .errloading {
+    width: 330px;
+}
+
+.nc-container #nc_1_wrapper,
+.nc-container.tb-login #nc_1_wrapper {
+    width: 340px
+}
+
+.nc-container .imgCaptcha,
+.nc-container .clickCaptcha {
+    width: 338px;
+}
+
+.nc-container.tb-login .imgCaptcha,
+.nc-container.tb-login .clickCaptcha {
+    width: 340px;
+}
+
+.nc-container.tb-login .imgCaptcha .captcha-error,
+.nc-container.tb-login .clickCaptcha .captcha-error {
+    width: 332px;
+}
+
+.nc-container.tb-login .errloading,
+.nc-container .errloading {
+    width: 330px;
+}
+
+.r_main_l_H {
+    float: left;
+    width: 100%;
+    border-right: 1px solid #eee;
+    padding-right: 50px;
+}

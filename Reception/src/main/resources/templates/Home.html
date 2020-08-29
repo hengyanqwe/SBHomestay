@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="租房,短租房,小猪短租,短租公寓,酒店式公寓,青年旅舍,小猪">
+    <meta name="description" content="小猪是国内知名的短租民宿预订平台，更是一个具有人情味的社交住宿社区。截至2019年5月，小猪在全球共有超过80万间房源，分布在全球超过700座城市，房源包括特色民宿、精品客栈、城市公寓、轰趴别墅、海边小屋、花园洋房、森林木屋等，让您充分感受住宿之美、人情之暖、分享之乐。">
+    <link rel="shortcut icon" href="/Path/images/favicon.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/Path/images/favicon.png" type="image/vnd.microsoft.icon">
+    <title>小猪民宿-住得更好，花得更少</title>
+    <meta content="no-transform " http-equiv="Cache-Control">
+
+    <script type="text/javascript" src="/Path/js/jquery.js"></script>
+    <script src="/Path/js/um.js" id="AWSC_umidPCModule"></script>
+    <script src="/Path/js/collina.js" id="AWSC_uabModule"></script>
+    <script type="text/javascript" class="nc-required-js-1 nc-awsc-script" src="/Path/js/awsc.js"></script>
+    <script src="/Path/js/hm.js"></script>
+    <script async="" src="/Path/js/sensorsdata.js" charset="UTF-8"></script>
+    <script src="/Path/js/hm.js"></script>
+    <script src="/Path/js/tingyun-rum.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Path/css/xzcss_003.css">
+    <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
+    <script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>
+    <script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>
+    <script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>
+    <link href="/Path/css/unifull.css" rel="stylesheet" type="text/css">
+    <link href="/Path/css/Home.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- 首页搜索的两个情况sss -->
+<div>
+    <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
+    <div class="head_bar">
+        <div class="head_bar_con">
+            <a href="https://www.xiaozhu.com/" class="logo_index">小猪</a>
+            <ul class="nav_R">
+                <li><a rel="nofollow" title="" class="show-register-box" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">
+                    注册 </a></li>
+                <li>·</li>
+                <li><a rel="nofollow" href="" class="logindialog">登录</a></li>
+                <li>·</li>
+                <li class="current">
+                    <a href="#ongo" class="openTri_R marginR10">短租指南</a>
+                    <div class="head_pop width_58">
+                        <div class="pop_column">
+									<span><a class="fl" href="https://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&amp;type=tenant">房客指南</a><a
+                                            class="fr" href="https://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&amp;type=landlord">房东指南</a></span>
+                        </div>
+                    </div>
+                </li>
+                <li><a rel="nofollow" data-href="https://www.xiaozhu.com/publish" class="btn_free show-register-box" id="Pub_Btn">免费发布房间</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="o_mask" id="maskName" style="display:none;"></div>
+    <div id="userlogindialog" class="login_register_box" style="display:none; width: 638px">
+        <div class="w_698">
+            <div class="r_colsed" id="closeUserLoginDialog"><span></span></div>
+            <div class="clearfix">
+                <div class="r_main_l_H">
+                    <ul class="r_tab clearfix">
+                        <li class=" tc cur underL1" style="width: 100%" id="generalLi">普通登录</li>
+                    </ul>
+                    <div id="generalLogin">
+                        <ul class="register_list">
+                            <li>
+                                <div class="h_30">&nbsp;</div>
+                                <div class="pr">
+                                    <div class="r_tel_ico"></div>
+                                    <input type="text" class="r_input_small" id="input-username" autocomplete="off" placeholder="手机号、邮箱"
+                                           disabled="true" style="width: 70%;">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="h_30">
+                                    <div class="r_error_tip" id="input-username-tip" style="display: none;"><span class="icon-wrong" id=""></span>手机号未注册</div>
+                                </div>
+                                <div class="pr">
+                                    <div class="r_password_ico"></div>
+                                    <input type="password" class="r_input_1" id="password" autocomplete="off" placeholder="密码"
+                                           disabled="true" style="width: 90%;">
+                                    <div class="h_30">
+                                        <div class="r_error_tip" id="password-tip" style="display: none;"><span class="ipt-text-pass"></span></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <span style="display:none" id="verify-show">
+                                <li></li>
+                            </span>
+                        </ul>
+                        <a href="###" class="r_input mt_10" id="orgBtn">登录</a>
+                        <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie"
+                                                                                         checked="checked">自动登录</span>
+                        <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w_698 login_register_box " style="display:none;" id="registerDialog">
+        <div class="r_colsed" id="closeRegiserDialog"><span></span></div>
+        <div class="clearfix">
+            <div class="r_main_l">
+                <ul class="r_tab1 clearfix">
+                    <li class="fl cur">注册小猪账号</li>
+                </ul>
+                <ul class="register_list">
+                    <li>
+                        <div class="h_30">&nbsp;</div>
+
+                        <div class="pr" id="reg">
+                            <div class=" r_telepho_ico"></div>
+                            <input type="text" id="input-mobile" autocomplete="off" placeholder="手机号" class="r_input_small col_input">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="h_30">
+                            <p class="r_error_tip" id="input-mobile-tip" style="display: none;">请输入手机号</p>&nbsp;
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pr">
+                            <div class="r_num_ico"></div>
+                            <input id="invitecode" type="text" autocomplete="off" placeholder="邀请码（选填）" class="r_input_1">
+                        </div>
+                        <div class="h_30" style="display:none;">
+                            <p id="input-invitecode-tip" class="r_error_tip" style="display: none;">邀请码输入有误</p>&nbsp;
+                        </div>
+                        <p class="col_fgray r_tip_text">使用朋友给您的邀请码注册后，你们均可获得300元</p>
+                    </li>
+                    <li>
+                        <div id="safeCheck">
+                            <div style="margin-bottom: 10px;width: 100%;" id="aliyun5lvfh031jav" class="nc-container" data-nc-idx="1">
+                                <div id="nc_1_wrapper" class="nc_wrapper">
+                                    <div id="nc_1_n1t" class="nc_scale">
+                                        <div id="nc_1__bg" class="nc_bg"></div>
+                                        <span id="nc_1_n1z" class="nc_iconfont btn_slide"></span>
+                                        <div id="nc_1__scale_text" class="scale_text"><span class="nc-lang-cnt" data-nc-lang="_startTEXT">请按住滑块，拖动到最右边</span></div>
+                                        <div id="nc_1_clickCaptcha" class="clickCaptcha">
+                                            <div class="clickCaptcha_text">
+                                                <b id="nc_1__captcha_text" class="nc_captch_text"></b>
+                                                <i id="nc_1__btn_2" class="nc_iconfont nc_btn_2 btn_refresh"></i>
+                                            </div>
+                                            <div class="clickCaptcha_img"></div>
+                                            <div class="clickCaptcha_btn"></div>
+                                        </div>
+                                        <div id="nc_1_imgCaptcha" class="imgCaptcha">
+                                            <div class="imgCaptcha_text"><input id="nc_1_captcha_input" maxlength="6" type="text" style="ime-mode:disabled"></div>
+                                            <div class="imgCaptcha_img" id="nc_1__imgCaptcha_img"></div>
+                                            <i id="nc_1__btn_1" class="nc_iconfont nc_btn_1 btn_refresh" onclick="document.getElementById('nc_1__imgCaptcha_img').children[0].click()"></i>
+                                            <div class="imgCaptcha_btn">
+                                                <div id="nc_1__captcha_img_text" class="nc_captcha_img_text"></div>
+                                                <div id="nc_1_scale_submit" class="nc_scale_submit"></div>
+                                            </div>
+                                        </div>
+                                        <div id="nc_1_cc" class="nc-cc"></div>
+                                        <i id="nc_1__voicebtn" tabindex="0" role="button" class="nc_voicebtn nc_iconfont" style="display:none"></i>
+                                        <b id="nc_1__helpbtn" class="nc_helpbtn"><span class="nc-lang-cnt" data-nc-lang="_learning">了解新功能</span></b>
+                                    </div>
+                                    <div id="nc_1__voice" class="nc_voice"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="input-slidecode-tip" class="r_error_tip input-slidecode-tip" style="margin-bottom: 10px">请进行验证</p>
+                    </li>
+                </ul>
+
+                <a href="#" id="reg-btn" class="r_input">立即注册</a>
+                <p class="mt_20">
+							<span class="check_css3 agreeResBox">
+								<input type="checkbox" class="input_check" id="check3">
+								<label for="check3"></label>
+							</span>
+                    我同意 <a href="https://www.xiaozhu.com/help/service" class="r-service-protocol" target="_blank">《服务协议》、</a><a href="https://www.xiaozhu.com/help/privacy"
+                                                                                                                                class="r-service-protocol" target="_blank">《隐私保护声明》</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner_con">
+        <div class="banner" style="height: 590px;">
+            <ul class="banner_ul">
+                <li class="banner_img" style="display:block">
+                    <a href="/Path/images/backgroundtop1.jpg" target="_blank">
+                        <img src="/Path/images/s37Vw216007002ebfd9b64.jpg"
+                             name="indeximage" alt="小猪">
+                    </a>
+                </li>
+                <li class="" style="display:none">
+                    <a href="/Path/images/backgroundtop2.jpg" target="_blank">
+                        <img src="/Path/images/s37Vwj16007002de0f565b.jpg"
+                             name="indeximage" alt="小猪">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search_index search_index_home">
+            <div class="search_column_l">
+                <span class="icon_place_box" id="suggest_icon"><i class="iconfont search-icon"></i></span>
+                <input class="ipt_search_l r_border" type="text" id="searchcity" name="searchcity" autocomplete="off" value="城市或目的地">
+                <div id="suggest" class="ac_results2" style="display:none;"></div>
+                <div class="sug  ">
+                    <div class="international" id="international_radios">
+                        <form class="international-form" id="radio_form">
+                            <lable class="radio-box lable-checked" id="radio_lable_l">
+                                <span class="radio-style radio-inland-style" id="radio_l" value="inland"></span>
+                                <input class="el-radio radio-inland" type="radio" name="overseas-inland" checked="checked" id="radio_inland_real"
+                                       value="inland">
+                                <span class="text-span" id="text-inland" value="inland">国内</span>
+                            </lable>
+                            <lable class="radio-box" id="radio_lable_r">
+                                <span class="radio-style radio-overseas-style" id="radio_r" value="abrd"></span>
+                                <input class="el-radio radio-overseas" type="radio" name="overseas-inland" id="radio_oversaes_real" value="abrd">
+                                <span class="text-span" id="text-overseas" value="abrd">海外</span>
+                            </lable>
+                        </form>
+                    </div>
+                    <div class="sug-tit">
+                        <div class="sug-tit-box">
+                            <span id="hotcity" value="hotcity" class="sug-hover">热门</span>
+                            <span id="a_d" value="a_b_c_d">ABCD</span>
+                            <span id="e_j" value="e_f_g_h_j">EFGHJ</span>
+                            <span id="k_n" value="k_l_m_n">KLMN</span>
+                            <span id="p_w" class="width64" value="p_q_r_s_t_w">PQRSTW</span>
+                            <span id="x_z" class="width43" value="x_y_z">XYZ</span>
+                        </div>
+                    </div>
+                    <div id="con_one_1" class="sug-city">
+                    </div>
+                </div> <input type="hidden" name="citydomain" id="citydomain" value="">
+                <input type="hidden" name="suggestion_citydomain" id="suggestion_citydomain" value="">
+                <input type="hidden" name="searchkey" id="searchkey" value="">
+                <input type="hidden" name="landmarkid" id="landmarkid" value="">
+                <input type="hidden" name="landmarktype" id="landmarktype" value="">
+                <input type="hidden" name="defaulturl" id="defaulturl" value="">
+                <input type="hidden" name="abroad" id="abroad" value="0">
+                <input type="hidden" name="timezone" id="timeZone" value="">
+                <input type="hidden" name="cityid" id="cityid" value="">
+                <input type="hidden" name="selectcitypinyin" id="selectcitypinyin" value="">
+                <div class="result_error_tip err_tip_style" style="display: none;" id="tip_searchcity"></div>
+            </div>
+            <div class="search_column_r">
+						<span class="icon_place_box" id="calendar_btn_s">
+							<i class="iconfont search-icon"></i>
+						</span>
+                <input class="ipt_search_r" type="text" readonly="readonly" id="startenddate" name="startenddate" value="入住离开日期">
+                <input type="hidden" name="startdate" id="startdate" value="">
+                <input type="hidden" name="enddate" id="enddate" value="">
+                <div id="calendar-box" class="calendar-box-index" style="display:none">
+                    <div class="calendar-month">
+                        <div class="calendar-title">
+                            <h2 cury="2020" curm="8">2020-8</h2>
+                        </div>
+                        <ul class="calendar-week">
+                            <li class="pink">日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li class="pink">六</li>
+                        </ul>
+                        <ul class="calendar-day">
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="line2 old " d="1" m="7" y="2020" w="6" today="0" ymd="2020-08-01"><span>1</span></li>
+                            <li class="line2 old " d="2" m="7" y="2020" w="0" today="0" ymd="2020-08-02"><span>2</span></li>
+                            <li class="line2 old " d="3" m="7" y="2020" w="1" today="0" ymd="2020-08-03"><span>3</span></li>
+                            <li class="line2 old " d="4" m="7" y="2020" w="2" today="0" ymd="2020-08-04"><span>4</span></li>
+                            <li class="line2 old " d="5" m="7" y="2020" w="3" today="0" ymd="2020-08-05"><span>5</span></li>
+                            <li class="line2 old " d="6" m="7" y="2020" w="4" today="0" ymd="2020-08-06"><span>6</span></li>
+                            <li class="line2 old " d="7" m="7" y="2020" w="5" today="0" ymd="2020-08-07"><span>7</span></li>
+                            <li class="line2 old " d="8" m="7" y="2020" w="6" today="0" ymd="2020-08-08"><span>8</span></li>
+                            <li class="line2 old " d="9" m="7" y="2020" w="0" today="0" ymd="2020-08-09"><span>9</span></li>
+                            <li class="line2 old " d="10" m="7" y="2020" w="1" today="0" ymd="2020-08-10"><span>10</span></li>
+                            <li class="line2 old " d="11" m="7" y="2020" w="2" today="0" ymd="2020-08-11"><span>11</span></li>
+                            <li class="line2 old " d="12" m="7" y="2020" w="3" today="0" ymd="2020-08-12"><span>12</span></li>
+                            <li class="line2 old " d="13" m="7" y="2020" w="4" today="0" ymd="2020-08-13"><span>13</span></li>
+                            <li class="line2 old " d="14" m="7" y="2020" w="5" today="0" ymd="2020-08-14"><span>14</span></li>
+                            <li class="line2 old " d="15" m="7" y="2020" w="6" today="0" ymd="2020-08-15"><span>15</span></li>
+                            <li class="line2 old " d="16" m="7" y="2020" w="0" today="0" ymd="2020-08-16"><span>16</span></li>
+                            <li class="line2 old " d="17" m="7" y="2020" w="1" today="0" ymd="2020-08-17"><span>17</span></li>
+                            <li class="line2 old " d="18" m="7" y="2020" w="2" today="0" ymd="2020-08-18"><span>18</span></li>
+                            <li class="line2 show-date " d="19" m="7" y="2020" w="3" today="1" ymd="2020-08-19"><span>今天</span></li>
+                            <li class="line2 show-date " d="20" m="7" y="2020" w="4" today="0" ymd="2020-08-20"><span>20</span></li>
+                            <li class="line2 show-date " d="21" m="7" y="2020" w="5" today="0" ymd="2020-08-21"><span>21</span></li>
+                            <li class="line2 show-date " d="22" m="7" y="2020" w="6" today="0" ymd="2020-08-22"><span>22</span></li>
+                            <li class="line2 show-date " d="23" m="7" y="2020" w="0" today="0" ymd="2020-08-23"><span>23</span></li>
+                            <li class="line2 show-date " d="24" m="7" y="2020" w="1" today="0" ymd="2020-08-24"><span>24</span></li>
+                            <li class="line2 show-date " d="25" m="7" y="2020" w="2" today="0" ymd="2020-08-25"><span>25</span></li>
+                            <li class="line2 show-date " d="26" m="7" y="2020" w="3" today="0" ymd="2020-08-26"><span>26</span></li>
+                            <li class="line2 show-date " d="27" m="7" y="2020" w="4" today="0" ymd="2020-08-27"><span>27</span></li>
+                            <li class="line2 show-date " d="28" m="7" y="2020" w="5" today="0" ymd="2020-08-28"><span>28</span></li>
+                            <li class="line2 show-date " d="29" m="7" y="2020" w="6" today="0" ymd="2020-08-29"><span>29</span></li>
+                            <li class="line2 show-date " d="30" m="7" y="2020" w="0" today="0" ymd="2020-08-30"><span>30</span></li>
+                            <li class="line2 show-date " d="31" m="7" y="2020" w="1" today="0" ymd="2020-08-31"><span>31</span></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                        </ul>
+                    </div>
+                    <div class="calendar-month">
+                        <div class="calendar-title">
+                            <h2 cury="2020" curm="9">2020-9</h2>
+                        </div>
+                        <ul class="calendar-week">
+                            <li class="pink">日</li>
+                            <li>一</li>
+                            <li>二</li>
+                            <li>三</li>
+                            <li>四</li>
+                            <li>五</li>
+                            <li class="pink">六</li>
+                        </ul>
+                        <ul class="calendar-day">
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="line2 show-date " d="1" m="8" y="2020" w="2" today="0" ymd="2020-09-01"><span>1</span></li>
+                            <li class="line2 show-date " d="2" m="8" y="2020" w="3" today="0" ymd="2020-09-02"><span>2</span></li>
+                            <li class="line2 show-date " d="3" m="8" y="2020" w="4" today="0" ymd="2020-09-03"><span>3</span></li>
+                            <li class="line2 show-date " d="4" m="8" y="2020" w="5" today="0" ymd="2020-09-04"><span>4</span></li>
+                            <li class="line2 show-date " d="5" m="8" y="2020" w="6" today="0" ymd="2020-09-05"><span>5</span></li>
+                            <li class="line2 show-date " d="6" m="8" y="2020" w="0" today="0" ymd="2020-09-06"><span>6</span></li>
+                            <li class="line2 show-date " d="7" m="8" y="2020" w="1" today="0" ymd="2020-09-07"><span>7</span></li>
+                            <li class="line2 show-date " d="8" m="8" y="2020" w="2" today="0" ymd="2020-09-08"><span>8</span></li>
+                            <li class="line2 show-date " d="9" m="8" y="2020" w="3" today="0" ymd="2020-09-09"><span>9</span></li>
+                            <li class="line2 show-date " d="10" m="8" y="2020" w="4" today="0" ymd="2020-09-10"><span>10</span></li>
+                            <li class="line2 show-date " d="11" m="8" y="2020" w="5" today="0" ymd="2020-09-11"><span>11</span></li>
+                            <li class="line2 show-date " d="12" m="8" y="2020" w="6" today="0" ymd="2020-09-12"><span>12</span></li>
+                            <li class="line2 show-date " d="13" m="8" y="2020" w="0" today="0" ymd="2020-09-13"><span>13</span></li>
+                            <li class="line2 show-date " d="14" m="8" y="2020" w="1" today="0" ymd="2020-09-14"><span>14</span></li>
+                            <li class="line2 show-date " d="15" m="8" y="2020" w="2" today="0" ymd="2020-09-15"><span>15</span></li>
+                            <li class="line2 show-date " d="16" m="8" y="2020" w="3" today="0" ymd="2020-09-16"><span>16</span></li>
+                            <li class="line2 show-date " d="17" m="8" y="2020" w="4" today="0" ymd="2020-09-17"><span>17</span></li>
+                            <li class="line2 show-date " d="18" m="8" y="2020" w="5" today="0" ymd="2020-09-18"><span>18</span></li>
+                            <li class="line2 show-date " d="19" m="8" y="2020" w="6" today="0" ymd="2020-09-19"><span>19</span></li>
+                            <li class="line2 show-date " d="20" m="8" y="2020" w="0" today="0" ymd="2020-09-20"><span>20</span></li>
+                            <li class="line2 show-date " d="21" m="8" y="2020" w="1" today="0" ymd="2020-09-21"><span>21</span></li>
+                            <li class="line2 show-date " d="22" m="8" y="2020" w="2" today="0" ymd="2020-09-22"><span>22</span></li>
+                            <li class="line2 show-date " d="23" m="8" y="2020" w="3" today="0" ymd="2020-09-23"><span>23</span></li>
+                            <li class="line2 show-date " d="24" m="8" y="2020" w="4" today="0" ymd="2020-09-24"><span>24</span></li>
+                            <li class="line2 show-date " d="25" m="8" y="2020" w="5" today="0" ymd="2020-09-25"><span>25</span></li>
+                            <li class="line2 show-date " d="26" m="8" y="2020" w="6" today="0" ymd="2020-09-26"><span>26</span></li>
+                            <li class="line2 show-date " d="27" m="8" y="2020" w="0" today="0" ymd="2020-09-27"><span>27</span></li>
+                            <li class="line2 show-date " d="28" m="8" y="2020" w="1" today="0" ymd="2020-09-28"><span>28</span></li>
+                            <li class="line2 show-date " d="29" m="8" y="2020" w="2" today="0" ymd="2020-09-29"><span>29</span></li>
+                            <li class="line2 show-date " d="30" m="8" y="2020" w="3" today="0" ymd="2020-09-30"><span>30</span></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                            <li class="old line2"></li>
+                        </ul>
+                    </div>
+                    <div class="bottom_clear_date bottom_clear_date_index">
+                        <div class="clear_date" id="clearSelect">清空日期 </div>
+                    </div><span class="cal_next" id="nextMonth"></span>
+                </div>
+            </div>
+            <!-- 首页搜索按钮 -->
+            <div class="index-search-box">
+                <input class="btn_pink_search" type="button" value="搜索小猪" onclick="javascript:searchCity('home');">
+                <span class="icon_place_box" id="calendar_btn_s">
+							<i class="iconfont iconfont-arrow"></i>
+						</span>
+            </div>
+        </div>
+        <span class="pics_pre" onclick="pre_pic()" style=""></span>
+        <span class="pics_next" onclick="next_pic()" style=""></span>
+        <span class="bg_up"></span>
+        <span class="bg_down"></span>
+    </div>
+
+    <div class="index_ad1" style="background-color:#2fb8c1;">
+        <a id="indexAdPic" href="http://www.xiaozhu.com/appdownload/fk?ca_source=xzshouye&amp;utm_source=syrk&amp;utm_medium=syrkgg&amp;pk_campaign=APP-xzsyrk-marketing"
+           target="_blank">
+            <img src="/Path/images/s3x0fy9601201eb80e924.png">
+        </a>
+    </div>
+
+
+    <div class="rooms_show" id="load_Ajax_IndexRecommend">
+        <div class="index_T">
+            <h1>别住酒店，住我家</h1>
+            <span>海内存知己，天涯若比邻</span>
+        </div>
+        <div class="content_v2">
+            <ul class="rooms_show_ul">
+                <li> <input type="text" value="6257935516" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic3.com/00,400,326,2/2,9,0,3,5096,1800,1200,25afc714.jpg"
+                         alt="小猪-西涌（西冲） 舒适宜居宽敞双床房近沙滩" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic1.com/22/s,5,rQ6K,414,414,2,44ece91c.jpg">
+                        <span class="room_name">西涌蝴蝶家民宿的家 - 深圳</span>
+                        <span class="index_price"><em class="bigFont">¥</em>198</span>
+                    </div>
+                    <a href="https://sz.xiaozhu.com/fangzi/6257935516.html" target="_blank" class="room_hover" luid="6257935516"></a>
+                </li>
+                <li> <input type="text" value="95236691101" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic2.com/00,400,326,2/51,0,59,48397,1800,1201,28c427c6.jpg"
+                         alt="小猪-【墨宿 more homie】LOFT 轻奢" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic2.com/22/s,5,nhXl,375,375,2,79f0ea8b.jpg">
+                        <span class="room_name">Macky_forever的家 - 成都</span>
+                        <span class="index_price"><em class="bigFont">¥</em>318</span>
+                    </div>
+                    <a href="https://cd.xiaozhu.com/fangzi/95236691101.html" target="_blank" class="room_hover" luid="95236691101"></a>
+                </li>
+                <li class="nomargin">
+                    <img class="img_room" lazy_src="/Path/images/city_gz.jpg" src="/Path/images/lazy_loadimage_gray.png"
+                                           width="400" height="326">
+                    <div class="rooms_intro city_top">
+                        <span class="index_price">20000+<em class="bigFont">套</em></span>
+                        <span class="room_name">岭南花城 · 广州</span>
+                    </div>
+                    <a href="https://sh.xiaozhu.com/" class="room_hover" target="_blank"></a>
+                    <input type="text" value="13" class="cityId" style="display: none">
+                </li>
+                <li>
+                    <img class="img_room city_big" lazy_src="/Path/images/city_xa_big.jpg" src="/Path/images/lazy_loadimage_gray.png"
+                          width="820" height="326">
+                    <div class="rooms_intro city_big">
+                        <span class="room_name">千年古都 · 西安</span><br>
+                        <span class="index_price">10000+<em class="bigFont">套</em></span>
+                    </div>
+                    <a href="https://gz.xiaozhu.com/" class="room_hover" target="_blank"></a>
+                    <input type="text" value="16" class="cityId" style="display: none">
+                </li>
+                <li class="nomargin"> <input type="text" value="95519858703" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic1.com/00,400,326,2/51,0,84,57933,1800,1200,78142291.jpg"
+                         alt="小猪-深圳东站布吉地铁站万象汇沃尔玛温馨小清新民宿" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic3.com/22/5,15,0,83,22326,260,260,626e66b8.jpg">
+                        <span class="room_name">飄揚的家 - 深圳</span>
+                        <span class="index_price"><em class="bigFont">¥</em>288</span>
+                    </div>
+                    <a href="https://sz.xiaozhu.com/fangzi/95519858703.html" target="_blank" class="room_hover" luid="95519858703"></a>
+                </li>
+                <li> <input type="text" value="30956145703" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic3.com/00,400,326,2/51,0,14,1867,1800,1200,0ac9eafd.jpg"
+                         alt="小猪-蜜 度 - 北欧轻奢风" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic1.com/22/5,9,0,21,5456,363,363,de954884.jpg">
+                        <span class="room_name">蜜度精品公寓的家 - 哈尔滨</span>
+                        <span class="index_price"><em class="bigFont">¥</em>298</span>
+                    </div>
+                    <a href="https://hrb.xiaozhu.com/fangzi/30956145703.html" target="_blank" class="room_hover" luid="30956145703"></a>
+                </li>
+                <li> <input type="text" value="71249756503" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic2.com/00,400,326,2/51,0,49,14462,1800,1200,913a4c2f.jpg"
+                         alt="小猪-春节特价至尊海景空中花园私人泳池大三室复试" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic2.com/22/5,10,0,60,8399,260,260,15314ec0.jpg">
+                        <span class="room_name">海之蓝海景众寓的家 - 三亚</span>
+                        <span class="index_price"><em class="bigFont">¥</em>777</span>
+                    </div>
+                    <a href="https://sanya.xiaozhu.com/fangzi/71249756503.html" target="_blank" class="room_hover" luid="71249756503"></a>
+                </li>
+                <li class="nomargin">
+                    <img class="img_room" lazy_src="/Path/images/city_qd.jpg" src="/Path/images/lazy_loadimage_gray.png"
+                                           width="400" height="326">
+                    <div class="rooms_intro city_top">
+                        <span class="index_price">10000+<em class="bigFont">套</em></span>
+                        <span class="room_name">风情帆都 · 青岛</span>
+                    </div>
+                    <a href="https://qd.xiaozhu.com/" class="room_hover" target="_blank"></a>
+                    <input type="text" value="114" class="cityId" style="display: none">
+                </li>
+                <li> <input type="text" value="22929884403" class="luId" style="display: none">
+                    <img class="img_room" lazy_src="https://image.xiaozhustatic1.com/00,400,326,2/2,12,0,83,1973,1800,1202,bc01323d.jpg"
+                         alt="小猪-設計師打造70平米古城上空*高景觀民宿" src="/Path/images/lazy_loadimage_gray.png"
+                         width="400" height="326">
+                    <span class="img_upCover"></span>
+                    <div class="rooms_intro">
+                        <img class="img_user_fd" lazy_src="https://image.xiaozhustatic3.com/22/5,12,0,22,7133,260,260,d68e6d5a.jpg">
+                        <span class="room_name">lxroca的家 - 清迈</span>
+                        <span class="index_price"><em class="bigFont">¥</em>120</span>
+                    </div>
+                    <a href="https://chiangmai.xiaozhu.com/fangzi/22929884403.html" target="_blank" class="room_hover" luid="22929884403"></a>
+                </li>
+                <li class="nomargin">
+                    <img class="img_room city_big" lazy_src="/Path/images/city_hz_big.jpg" src="/Path/images/lazy_loadimage_gray.png"
+                                           width="820" height="326">
+                    <div class="rooms_intro city_big">
+                        <span class="room_name">最忆西湖 · 杭州</span><br>
+                        <span class="index_price">8000+<em class="bigFont">套</em></span>
+                    </div>
+                    <a href="https://nj.xiaozhu.com/" class="room_hover" target="_blank"></a>
+                    <input type="text" value="65" class="cityId" style="display: none">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="index_T">
+        <h1>让分享和信赖悄然发生</h1>
+        <span>完善的安全机制和信用机制，帮助房东和房客</span>
+    </div>
+    <div class="content_v2 marginB30">
+        <ul class="xz_ads">
+            <li><span class="xzindexad1"></span><a href="#ongo" class="ads_hover indexdialogpic" name="authentication"></a></li>
+            <li><span class="xzindexad2"></span><a href="#ongo" class="ads_hover indexdialogpic" name="transaction"></a></li>
+            <li><span class="xzindexad3"></span><a href="#ongo" class="ads_hover indexdialogpic" name="protection"></a></li>
+            <li class="nobor"><span class="xzindexad4"></span><a href="#ongo" class="ads_hover indexdialogpic" name="comment"></a></li>
+        </ul>
+    </div>
+
+    <div class="index_commnet">
+        <div class="index_T">
+            <h1 class="white">世间所有的相遇都是久别重逢</h1>
+            <span class="white">房客和房东都在彼此感动着</span>
+        </div>
+        <div id="commentdiary">
+            <div class="comment_column">
+                <div class="cmt_con">
+                    <span class="comment_user">房客点评</span>
+                    <div>
+                        <span><img src="/Path/images/s36ixn13213225cc5e91e.jpg"></span>
+                        <span>伯纳乌的天空</span>
+                        <span>2019.11</span>
+                        <span class="comment_W"><a href="https://cd.xiaozhu.com/fangzi/128201068903.html#comment" target="_blank">一
+										直听说成都民宿蛮多的，和枯燥无味的酒店房间相比会更有家的味道，于是就想体验一下，没想到，太温暖了。周边虽然繁华却也很安静，交通也非常方便。房主是
+										个非常有耐心的成都妹子，人也很漂亮，健谈，来住的朋友都可以和她摆龙门阵的，也可以找她推荐附近好吃的。洗衣机、厨房厨具碗筷等等，都是准备好的，随时
+										都可以使用。说到房子，面积真的蛮大的，有两个卫生间和两个阳台，超级棒的！等下次回成都还来住!!!</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/1707322962260260bbe8a924.jpg"></span>
+                        <span>饭酱灬</span>
+                        <span>2019.11</span>
+                        <span class="comment_W"><a href="https://gl.xiaozhu.com/fangzi/127340988103.html#comment" target="_blank">来
+										桂林旅行，但是酒店里面全是旅行团，就选的民宿，没想到真的特别好！！！就在市中心里面，楼下全是吃的，下午有本地米粉、螺蛳粉，晚上好多烧烤啊！民宿可
+										以做饭还有洗衣机洗衣液，要什么有什么。床超大，整个房间粉粉的，还有个小吧台，吧台上还有很多可爱的小玩偶，还有星空灯，超级少女心！简直就是年轻人想
+										象中的空间。房东小姐姐人也好，有什么问题都可以问她。这个房间反正就是，除了我妈不在以外就和家里没啥区别了。</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/23080100921321326ff717df.jpg"></span>
+                        <span>一纸小兔几丶</span>
+                        <span>2019.11</span>
+                        <span class="comment_W"><a href="https://nj.xiaozhu.com/fangzi/126617451903.html#comment" target="_blank">房
+										东小姐姐很贴心，怕我找不着地方，入住前就给了自己做的方位图。房子在别墅区，邻居阿姨都在种花种草，一猫一狗一花一草，真是让人羡慕的生活了。房间很有
+										古风的感觉，很多精致的摆件，还有古筝！我不会弹，邀请小姐姐弹了一首，超好听的！还有一只超级乖的狗狗，喜欢撸狗的我真的开心到爆！小姐姐还带我们去了
+										附近的三江学院吃小吃，打卡了抖音超火的月亮馍，正好小姐姐的妈妈也在，阿姨跟我们很聊得来，度过了很温馨的一天。</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/s5Afrn329329251f0091d.jpg"></span>
+                        <span>z1katrina</span>
+                        <span>2019.11</span>
+                        <span class="comment_W"><a href="https://lijiang.xiaozhu.com/fangzi/28777227701.html#comment" target="_blank">选
+										择丽江，因为这里有蓝天白云、雪山古镇、小桥流水、石板路，红灯笼，花衣长裙，还有无尽的花海。选择正确的丽江客栈，更是影响着整个旅行的心情，在这里住
+										了五晚，我感受到了暖暖的人情味，真的有宾至如归的感觉，客人来或走，老板都亲自接送拉行李。每天大厅里都是来自各个地方的年轻人一起喝茶聊天，午后在院
+										子里晒太阳，坐在摇椅上喝咖啡！我愿意就这样呆在客栈里，静静享受这美好的时光。</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/s55dxn329329247e0fc6b.jpg"></span>
+                        <span>张得戏</span>
+                        <span>2019.11</span>
+                        <span class="comment_W"><a href="https://hn.xiaozhu.com/fangzi/129446480901.html#comment" target="_blank">“民
+										宿”
+										二字，虽然平常，却总令人神往！我把目标定为一个叫原颂若宿的民宿，“原”意为回归本质，“颂”象征诗和远方，这不就是我一直想要的生活吗？这里给人眼前
+										一亮的是服务人员都是年轻的小伙伴，青春洋溢有朝气。房间设计很时尚，还很宽敞。本来预定的大床房，在已经办理了入住手续的情况下还帮我换了一间双床房，
+										非常贴心了！星空不问赶路人，岁月不负有心人！祝愿你们越来越好，让来海南的小伙伴们都有一个美好的体验！</a></span>
+                    </div>
+                    <ul class="cmt_ul">
+                        <li class="cmt_current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <em class="middle_line"></em>
+            </div>
+            <div class="comment_column">
+                <div class="cmt_con cmt_R">
+                    <span class="comment_user">房东日记</span>
+                    <div>
+                        <span><img src="/Path/images/230391237363364b715fa96.jpg"></span>
+                        <span>白云机场和家</span>
+                        <span>2019.09.10</span>
+                        <span class="comment_W"><a href="https://www.xiaozhu.com/fangdong/105185071301/diary/121463343200.html#" target="_blank">今
+										天被一位昵称叫清风的客人感动到了，走到了接机地点才打电话让我们开车过去，办入住前也都拿好了身份证。离店后的评论是：第二次入住了，多的也不知道说
+										啥。这种评价虽简单，却透出彼此的熟悉感，让各自心里挺温暖的。我爱民宿，也爱我的每位客人，希望彼此都能成为对方记忆中的一小部分，也感谢那些熟客，在
+										我们工作繁忙时，还主动帮我们引导其他第一次来的客人，教他们刷电梯卡，拿旅游地图帮他们指引路线。</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/s5rz302602602724aa10d.jpg"></span>
+                        <span>YQYJ_HOTEL</span>
+                        <span>2019.08.28</span>
+                        <span class="comment_W"><a href="https://www.xiaozhu.com/fangdong/32513670501/diary/120043253100.html#" target="_blank">从
+										长沙来的朋友们预订了整栋房子，一大家子，有和蔼可亲的老人，年轻气盛的小姐姐小哥哥，彬彬有礼的大哥大姐，幸福感爆棚！入住前我们把房子都进行了杀虫处
+										理，避免有蚊虫；提前准备了欢迎水果等等，期间也沟通顺畅，虽然中间的热水器出了点小问题，及时解决后也得到了理解。老人非常幽默，和蔼，心善！两晚时
+										间，短暂相处让我体会到其家庭的和睦与幸福！</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/5103915187260260e7c0414c.jpg"></span>
+                        <span>陈阿姨家</span>
+                        <span>2019.09.14</span>
+                        <span class="comment_W"><a href="https://www.xiaozhu.com/fangdong/1233647335/diary/121952141600.html#" target="_blank">因
+										为热爱旅游，接触到分享住宿。每读到一个个用心的点评，都特别的感动和欣慰，什么样的付出都是值得的。又一期小猪超棒房东，珍惜每一次获得，过去的日子里
+										谢谢你们的认可，更感谢小猪给予我们相遇的机会。陈阿姨家4年多，有收到特别真诚一路背过来的小礼物，沉甸甸的家乡味，有走时收拾的一尘不染的家，有再次
+										来家的老客，也有辗转推荐的新朋友，感恩有你们！</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/51012106528329329a56f7992.jpg"></span>
+                        <span>青岛金沙滩儒家</span>
+                        <span>2019.06.16</span>
+                        <span class="comment_W"><a href="https://www.xiaozhu.com/fangdong/102504066001/diary/108452183600.html#" target="_blank">我
+										的第一位房客是上海来的小姑娘，带着父母还有小宝宝。带她们来到房间，进去的瞬间她们真的好开心。她们一起来了6个人，定的是套二房间我觉得是住不下，正
+										好自己家三居室还空着一套就给她们住了，所以进房间一个劲说谢谢我。客人住了3天，退房后我进房间确实是意外了，房间住的特别的干净整洁，一尘不染，更意
+										外的是她回到单位把我的民宿告诉了同事，之后她们来玩都会在小猪上预订我家的房子。有时候所有等待和付出都是值得的。</a></span>
+                    </div>
+                    <div style="display:none;">
+                        <span><img src="/Path/images/200445590260260216e7ba9.jpg"></span>
+                        <span>厦门地图公园客栈</span>
+                        <span>2019.08.24</span>
+                        <span class="comment_W"><a href="https://www.xiaozhu.com/fangdong/31332218301/diary/119482490900.html#" target="_blank">Jaden
+										是地道的福建人，资深国企雇员，从事旅游行业多年｡热忱的接待每一次到访的房客，同时给房客们提供详细周到的旅行攻略和建议，还可以为他们定制私人旅行计
+										划，为房客们的出行体验添砖加瓦｡爱旅行，爱生活，希望每天把生活过成诗。会调鸡尾酒､咖啡 爱摄影､阅读､音乐，愿背上包，从此开始探寻诗和远方……</a></span>
+                    </div>
+                    <ul class="cmt_ul">
+                        <li class="cmt_current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="foot_v2">
+        <span class="foot_T">关注我们</span>
+        <ul class="see_ul">
+            <li><a href="#ongo" class="icon_wx indexdialogpic" name="focusus"></a></li>
+            <li><a href="https://weibo.com/xzduanzu" target="_blank" class="icon_wb"></a></li>
+        </ul>
+        <ul class="foot_ul">
+            <li><a class="guide" href="https://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&amp;type=tenant" target="_blank">房客指南</a></li>
+            <li><a class="guide icon_fk" href="https://www.xiaozhu.com/xzweb.php?op=Help_UserGuide&amp;type=landlord" target="_blank">房东指南</a></li>
+            <li>
+                <span class="guide_T">关于我们</span>
+                <a href="https://www.xiaozhu.com/aboutus" target="_blank">关于小猪</a>
+                <a href="https://app.mokahr.com/apply/xiaozhu/4514" target="_blank">加入我们</a>
+                <a href="https://www.xiaozhu.com/contactus" target="_blank">联系我们</a>
+                <a href="https://open.xiaozhu.com/" target="_blank">开放平台</a>
+            </li>
+            <li>
+                <span class="guide_T">网站帮助</span>
+                <a href="https://www.xiaozhu.com/help/index" target="_blank">帮助中心</a>
+                <a href="https://www.xiaozhu.com/sitemap.html" target="_blank">网站地图</a>
+            </li>
+            <li class="width_280">
+                <span class="guide_T">网站协议</span><br>
+                <a href="https://www.xiaozhu.com/help/service" target="_blank">服务协议</a>
+                <a href="https://www.xiaozhu.com/help/landlordRule" target="_blank">房东规则</a>
+                <a href="https://www.xiaozhu.com/help/tenantRule" target="_blank">房客规则</a>
+                <a href="https://www.xiaozhu.com/help/auditRule" target="_blank">房源上线标准</a>
+                <a href="https://www.xiaozhu.com/help/privacy" target="_blank">隐私保护</a>
+                <a href="https://www.xiaozhu.com/help/copyright" target="_blank">版权声明</a>
+                <a href="https://www.xiaozhu.com/help/disclaimer" target="_blank">免责声明</a>
+                <a href="https://www.xiaozhu.com/help/intellectualProperty" target="_blank">知识产权声明</a>
+                <a href="https://www.xiaozhu.com/help/commentRule" target="_blank">点评发布规则</a>
+                <a href="https://www.xiaozhu.com/help/japanReservationRule" target="_blank">日本标准住宅宿泊仲介业约款</a>
+            </li>
+            <li class="bigFont online_kf">
+                <span class="logindialog"><i></i>在线客服</span>
+                <p>客服电话 400 - 010 - 7890</p>
+                <p>客服邮箱 service@xiaozhu.com</p>
+            </li>
+        </ul>
+        <dl class="link_dl">
+            <dt>城市导航</dt>
+            <dd>
+                <a target="_blank" href="https://bj.xiaozhu.com/">北京短租房</a>
+                <a target="_blank" href="https://sh.xiaozhu.com/">上海短租房</a>
+                <a target="_blank" href="https://nj.xiaozhu.com/">南京短租房</a>
+                <a target="_blank" href="https://cd.xiaozhu.com/">成都短租房</a>
+                <a target="_blank" href="https://gz.xiaozhu.com/">广州短租房</a>
+                <a target="_blank" href="https://cq.xiaozhu.com/">重庆短租房</a>
+                <a target="_blank" href="https://wh.xiaozhu.com/">武汉短租房</a>
+                <a target="_blank" href="https://dl.xiaozhu.com/">大连短租房</a>
+                <a target="_blank" href="https://sanya.xiaozhu.com/">三亚短租房</a>
+                <a target="_blank" href="https://lijiang.xiaozhu.com/">丽江短租房</a>
+                <a target="_blank" href="https://tj.xiaozhu.com/">天津短租房</a>
+                <a target="_blank" href="https://xianggang.xiaozhu.com/">香港短租房</a>
+                <a target="_blank" href="https://cs.xiaozhu.com/">长沙短租房</a>
+                <a target="_blank" href="https://wx.xiaozhu.com/">无锡短租房</a>
+                <a target="_blank" href="https://km.xiaozhu.com/">昆明短租房</a>
+                <a target="_blank" href="https://jn.xiaozhu.com/">济南短租房</a>
+                <a target="_blank" href="https://xm.xiaozhu.com/">厦门短租房</a>
+                <a target="_blank" href="https://qd.xiaozhu.com/">青岛短租房</a>
+                <a target="_blank" href="https://zz.xiaozhu.com/">郑州短租房</a>
+                <a target="_blank" href="https://xa.xiaozhu.com/">西安短租房</a>
+                <a target="_blank" href="https://hz.xiaozhu.com/">杭州短租房</a>
+                <a target="_blank" href="https://sz.xiaozhu.com/">深圳短租房</a>
+                <a target="_blank" href="https://sy.xiaozhu.com/">沈阳短租房</a>
+                <a target="_blank" href="https://su.xiaozhu.com/">苏州短租房</a>
+            </dd>
+        </dl>
+        <dl class="link_dl">
+        </dl>
+        <div class="foot_btm">
+            <a class="record-jump" href="http://beian.miit.gov.cn/" target="_blank" rel="noopener norefferrer">京ICP备12035936号-1</a>
+            &nbsp;&nbsp;许可证号：京ICP证140510号 &nbsp;&nbsp; <a href="https://www.anquan.org/s/www.xiaozhu.com" |="" name="mt8SMvYyRDI92b06nuDs8dPFapllCJYidqhM1WlOoGRZ9DWpbo"
+                                                          rel="nofollow" target="_blank">安全联盟</a> &nbsp;&nbsp; 北京快跑信息科技有限公司 &nbsp;&nbsp; <a href="/Path/images/yingye.jpg"
+                                                                                                                                            |="" name="yingyezhizhao" rel="nofollow" target="_blank">营业执照号 103613118</a> <span style="display:none">
+						&nbsp;&nbsp; 地址：北京市海淀区知春路56号 &nbsp;&nbsp;电话：010-62961978</span>
+        </div>
+        <div style="margin:0 auto;color:#bdc3c7;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020380" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                    src="/Path/images/govRecord_icon.png">
+                <p style="display:inline-block;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#bdc3c7;">京公网安备
+                    11010802020380号</p>
+            </a>
+            &nbsp;&nbsp; 违法和不良信息举报电话：4000107890转6 &nbsp;&nbsp; 举报邮箱：jubao@xiaozhu.com
+        </div>
+        <div style="margin-top: 20px">
+            <a target="cyxyv" href="https://v.yunaq.com/certificate?domain=www.xiaozhu.com&amp;from=label&amp;code=90030"
+               style="margin-right: 10px"> <img src="/Path/images/label_sm_90030.png"
+                                                style="height: 48px"></a>
+            <a id="_xinchacharenzheng_cert_vip_kexinweb" style="text-decoration:none;" target="_blank" href="https://xyt.xinchacha.com/pcinfo?sn=448825606222778368&amp;certType=6">
+                <img src="/Path/images/icon3.png"
+                     style="height: 48px"> </a>
+        </div>
+    </div>
+
+    <input type="hidden" name="actionName" id="actionName" value="Front_Index">
+    <input type="hidden" name="xz_srf_token" id="xz_srf_token" value="d8c2bfc65d77bf6f2b2497e6e930e5a5">
+
+    <script type="text/javascript" src="/Path/js/lazyload.js"></script>
+</div>
+
+<input type="hidden" id="defaultCityShowStr" value="城市或目的地">
+<input type="hidden" id="defaultstartdate" value="">
+<input type="hidden" id="defaultenddate" value="">
+
+<div class="widget_wrapper" style="display:none;" id="firstOrderReducePop">
+    <div class="inner">
+        <a class="widget_login" href="https://www.xiaozhu.com/xzweb.php?op=FangKe_MyCoupon" id="popimg"></a>
+        <div class="widget_download"><img src="/Path/images/xz5_pc_download.png"
+                                          alt="" title=""></div>
+        <a class="widget_close" href="javascript:closeWidgetPop();"></a>
+    </div>
+</div>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-1">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="authenticationDialog" style="">
+        <a href="#ongo" class="pop_close_v2 closeDialog"></a>
+        <div class="xz_pop_T"><span class="icon_sfyz"></span>双方身份验证</div>
+        <p class="xz_pop_p">
+            <img class="fr" lazy_src="finish" src="/Path/images/xz_ad_pic2.jpg">
+            <span class="pop_p_T">为什么要进行身份验证？</span>
+            我们相信，彼此的信任是建立在使每个人放心的安全机制上。充分的身份验证机制，会保证我们平台更加安全可靠。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">让房客无忧</span>
+            所有房东的手机号码、邮箱等都是真实可信的。并且我们拥有一套完善的验证机制，会人工审核房东的真实姓名、真实面孔、身份证等信息，现在大多数房东已经验证了身份，我们会致力于将此机制推广到全部房东中。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">让房东无忧</span>
+            在线交易的房客都会经过三重实名验证：首先，我们会验证房客绑定的手机号码，其次，交易会绑定房客银行卡的实名身份，最重要的是房客都会通过国家二代身份证验证系统进行验证，来确保房客的真实性。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">身份隐私如何保证？</span>
+            隐私权是用户的重要权利，我们非常重视用户的隐私权，承诺在任何情况下都会对用户的身份隐私进行保护。更多内容可以查看<a href="https://www.xiaozhu.com/help/privacy" target="_blank">《隐私保护声明》</a>
+        </p>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-2">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="transactionDialog" style="">
+        <a href="#ongo" class="pop_close_v2 closeDialog"></a>
+        <div class="xz_pop_T"><span class="icon_aqjy"></span>安全线上交易</div>
+        <p class="xz_pop_p">
+            <img class="fr" lazy_src="finish" src="/Path/images/xz_ad_pic1.jpg">
+            <span class="pop_p_T">线上交易才最安全！</span>
+            我们打造了安全可靠又灵活方便的第三方担保支付系统，而且支持多种付款和收款方式。房客不是直接支付给房东，而是由小猪代为担保，入住完成后才支付给房东。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">保护房客的资金安全</span>
+            <strong>1.&nbsp;入住体验监督机制：</strong>如发生以下三种情况，房客可致电客服进行投诉，客服将在第一时间为您解决问题，保障房客的入住权益：<br>
+            （1） 入住时发现房间的实际情况与页面展示的房源描述信息不符；<br>
+            （2）&nbsp;入住时发现房东没有预留房间；<br>
+            （3）&nbsp;房东乱收费用（如：抬高房价或入住后才告知房客额外收取事先未约定的费用）。<br>
+            客服将根据每单投诉的不同情况提供具体解决方案。<br>
+            <strong>2．订单取消机制：</strong>如房客计划有变，需取消入住或提前退房，在我们第三方担保的机制下，保证房客在合理约定的违约金外，顺利拿回剩余订金。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">保护房东的资金安全</span>
+            <strong>1、取消订单无损失：</strong>因为在线交易会要求房客提前支付房费，如出现房客取消入住，或提前退房的违约情况，就可以按照房东交易规则约定比例收取合理的违约金，从而保障房东的利益。<br>
+            <strong>2、不用担心收假钞：</strong>大额交易十分不方便，还担心会收到假钞，而使用我们的第三方担保支付系统便无需担心。
+        </p>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-3">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-3" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="protectionDialog" style="">
+        <a href="#ongo" class="pop_close_v2 closeDialog"></a>
+        <div class="xz_pop_T"><span class="icon_jshd"></span>坚实保障后盾</div>
+        <p class="xz_pop_p">
+            <img class="fr" src="/Path/images/xz_ad_pic4.jpg">
+            <span class="pop_p_T">保障只是后盾</span>
+            小猪上线以来，已有逾千万的房客完成入住，并且从未发生过不愉快的事件，但我们仍然充分理解您对住进一个陌生人家中的担忧，并为此做了大量工作来保障您的整个交易和入住安全。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">房客保险</span> 无论是国内出行还是到海外出行，小猪都为房客提供了保险服务。只要身份信息完整还可免费获赠保险，免除双方的后顾之忧。更多内容可以查看<a href="https://www.xiaozhu.com/xz_web2/vipprotocol/pages/insurance_stay.html"
+                                                                                                                 target="_blank">《平安住宿旅行意外保险》</a>和<a href="https://www.xiaozhu.com/xzweb.php?op=Help_ZhongAnFkOutSideInsuranceDescription"
+                                                                                                                                                     target="_blank">《众安海外住宿意外保险告知书》</a>
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">房东财产综合保险</span>
+            房客入住期间，房屋如出现财产损坏，将由《家庭财产综合保险》为您提供解决方案，最大限度的保障您的利益。
+            <br>
+            更多内容可以查看<a href="https://www.xiaozhu.com/yunying.php?op=YunYing_LandlordInsurance" target="_blank">《家庭财产综合保险》</a>
+        </p>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-4">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-4" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="commentDialog" style="">
+        <a href="#ongo" class="pop_close_v2 closeDialog"></a>
+        <div class="xz_pop_T"><span class="icon_dpxy"></span>点评积累信用</div>
+        <p class="xz_pop_p">
+            <img class="fr" src="/Path/images/xz_ad_pic3.jpg">
+            <span class="pop_p_T">我们提倡点评</span>
+            小猪需要真实的点评，让美好的回忆可以记录下来，这样可以传播给更多的好房东和好房客，让大家都可以参与进来，建立一个人与人可以充分信赖的环境。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">点评是公平对等的</span>
+            房客通过在线交易预订短租房，可以对入住经历进行点评，这些点评可以帮助其他房客了解房间和房东。与此同时，房东也可以对房客进行点评，其他房东也可以根据这些点评了解到房客是否受欢迎。任何的点评，都只能由发布者自己删除。
+        </p>
+        <p class="xz_pop_p">
+            <span class="pop_p_T">激励好房东和好房客</span>
+            房东是否热情好客？房客是否广受欢迎？<br>我们相信在真实可靠的点评机制下，不断积累的信用会赶走那些坏房东和坏房客，让真正懂得分享的好房东和好房客充盈整个平台。
+        </p>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-5">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-5" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="index_pop wx_pop indexdialog ui-dialog-content ui-widget-content" id="focususDialog" style="">
+        <a href="#ongo" class="pop_close_v2 closeDialog"></a>
+        <div class="wx_pop_con fl wx_bor_R">
+            <span>随时了解优质美宿，扫我吧</span>
+            <img lazy_src="finish" style="width: 150px" src="/Path/images/wx_1.jpg">
+            <span>小猪订阅号：xiaozhunite</span>
+        </div>
+        <div class="wx_pop_con fr">
+            <span>预订服务、优惠活动，扫我吧</span>
+            <img lazy_src="finish" style="width: 150px" src="/Path/images/wx_2.jpg">
+            <span>小猪服务号：xiaozhufuwu</span>
+        </div>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-6">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-6" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="bg_black vediodialog ui-dialog-content ui-widget-content" id="vedio1Dialog" style="">
+        <a href="#ongo" class="pop_close_v2 closVedioeDialog"></a>
+        <div class="marginT46" id="vedio1Content" style="width:880px;height:528px;"> </div>
+    </div>
+</div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+     tabindex="-1" role="dialog" aria-labelledby="ui-id-7">
+    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-7" class="ui-dialog-title">&nbsp;</span><a
+            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+    <div class="bg_black vediodialog ui-dialog-content ui-widget-content" id="vedio2Dialog" style="">
+        <a href="#ongo" class="pop_close_v2 closVedioeDialog"></a>
+        <div class="marginT46" id="vedio2Content" style="width:880px;height:528px;"> </div>
+    </div>
+</div>
+
+<div class="suspension">
+    <ul class="suspension_lf">
+        <li class="sus_list1 im_base_btn im_base_btn_chat" btn_type="chat" id="im_chat_btn" title="在线消息"><span style="position:relative"></span><i
+                class="sus_i hid" id="im_chat_unread_num"></i></li>
+        <li class="sus_list2 im_base_btn im_has_login_base_btn" btn_type="collection" id="im_collection_btn" title="收藏"><span></span></li>
+        <li class="sus_list3 im_base_btn im_has_login_base_btn" btn_type="notice" id="im_noticeAndNotification_btn" title="提醒和系统消息"><span></span><i
+                class="sus_i hid" id="im_notice_notification_num"></i></li>
+        <li class="sus_list4 im_base_btn loginReBind im_has_login_base_btn" btn_type="feedback" id="im_feedBack_btn" title="反馈"><span></span></li>
+        <li class="sus_list5 im_base_btn loginReBind im_has_login_base_btn" btn_type="qr" id="im_qrCode_btn" title="二维码"><span></span></li>
+    </ul>
+    <div class="suspension_rg" id="to_go"><a href="#"></a></div>
+</div>
+<div class="wapper hid nologin" id="im_nologin_chat">
+    <h4 class="public_top">在线消息<div class="rt_btn"></div>
+    </h4>
+    <p class="public_head">“登录后与房东聊天”</p>
+    <div class="public_center"><img src="/Path/images/xxdl.png"
+                                    width="205" height="178"></div>
+    <form class="center_btn" action="" methot="post">
+        <a class="im_btn_pink" href="https://www.xiaozhu.com/login?next=https%3A%2F%2Fwww.xiaozhu.com%2F">立即登录</a>
+        <a class="im_btn_pink marginT20" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">注册</a>
+    </form>
+</div>
+<div class="wapper hid nologin" id="im_nologin_collection">
+    <h4 class="public_top">我的收藏<div class="rt_btn"></div>
+    </h4>
+    <p class="public_head">“登录后，查看收藏的房源”</p>
+    <div class="public_center"><img src="/Path/images/scdl.jpg"
+                                    width="205" height="178"></div>
+    <form class="center_btn" action="" methot="post">
+        <a class="im_btn_pink" href="https://www.xiaozhu.com/login?next=https%3A%2F%2Fwww.xiaozhu.com%2F">立即登录</a>
+        <a class="im_btn_pink marginT20" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">注册</a>
+    </form>
+</div>
+<div class="wapper hid nologin" id="im_nologin_notice">
+    <h4 class="public_top">
+        <span class="underL" id="noLoginNotificationBtn">提醒</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="noLoginNoticeBtn">系统消息</span>
+        <div class="rt_btn"></div>
+    </h4>
+    <div class="tab_content0">
+        <p class="public_head nobor">“登录后，不错过任何提醒”</p>
+        <div class="public_center"><img src="/Path/images/txdl.jpg"
+                                        width="205" height="178"></div>
+        <form class="center_btn" action="" methot="post">
+            <a class="im_btn_pink" href="https://www.xiaozhu.com/login?next=https%3A%2F%2Fwww.xiaozhu.com%2F">立即登录</a>
+            <a class="im_btn_pink marginT20" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">注册</a>
+        </form>
+    </div>
+    <div class="tab_content1 hid">
+        <p class="public_head nobor">“登录后，不错过任何通知”</p>
+        <div class="public_center"><img src="/Path/images/tzdl.jpg"
+                                        width="205" height="178"></div>
+        <form class="center_btn" action="" methot="post">
+            <a class="im_btn_pink" href="https://www.xiaozhu.com/login?next=https%3A%2F%2Fwww.xiaozhu.com%2F">立即登录</a>
+            <a class="im_btn_pink marginT20" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">注册</a>
+        </form>
+    </div>
+</div>
+<div class="wapper hid">
+    <h4 class="public_top">
+        <span>提醒</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="underL">通知</span>
+        <div class="rt_btn"></div>
+    </h4>
+    <div class="tab_conten1">
+        <p class="public_head nobor">“登录后，不错过任何通知”</p>
+        <div class="public_center"><img src="/Path/images/tzdl.jpg"
+                                        width="205" height="178"></div>
+        <form class="center_btn" action="" methot="post">
+            <a class="im_btn_pink" href="https://www.xiaozhu.com/login?next=https%3A%2F%2Fwww.xiaozhu.com%2F">立即登录</a>
+            <a class="im_btn_pink marginT20" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">注册</a>
+        </form>
+    </div>
+</div>
+<div class="wapper hid im_has_login" pagetype="collection">
+    <h4 class="public_top collection_public_top">我的收藏<div class="rt_btn"></div>
+    </h4>
+    <div style="height:1px; margin: 0 15px; background:#efefef"></div>
+    <div id="favoriteList" style="height:456px;"></div>
+    <div id="favoriteDetail" style="height:456px; display:none;"></div>
+</div>
+<div class="wapper hid im_has_login" id="im_notice" pagetype="notice">
+    <h4 class="public_top">
+        <span class="underL" id="im_to_notification_tab">提醒<a id="im_notification_num" class="mes_numb"></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+            id="im_to_notice_tab">系统消息<a id="im_notice_num" class="mes_numb"></a></span>&nbsp;
+        <div class="rt_btn"></div>
+    </h4>
+    <div class="tab_content0" id="im_notification_tab" style="height:456px;">
+    </div>
+    <div class="tab_content1 hid" id="im_notice_tab" style="height: 456px;overflow-y:scroll"></div>
+</div>
+<div class="wapper hid nologin im_has_login" id="im_nologin_feedback" pagetype="feedback">
+    <h4 class="public_top">意见反馈<div class="rt_btn"></div>
+    </h4>
+    <p class="public_head fk_head"></p>
+    <form class="advice_txt" action="" method="get">
+        <textarea class="advice_txt1" name="textarea" id="im_feedback_problem" value="" placeholder="您对小猪有任何意见，或者使用中遇到问题，请在本页面反馈。"></textarea>
+        <textarea class="advice_txt2" value="" id="im_feedback_contact" placeholder="请尽量留下你的手机、QQ或邮箱，以便我们及时给您回复。"></textarea>
+    </form>
+    <form class="public_center">
+        <a class="im_btn_pink marginT20 marginB30" id="im_feedback_submitBtn">提交反馈</a>
+    </form>
+    <p class="fk_foot">如您在访问小猪的过程中遇到困惑也可以访问<br>
+        <span class="col_pink"><a href="https://www.xiaozhu.com/help/index" target="_blank" style="text-decoration:none;">帮助中心</a></span>
+    </p>
+</div>
+<div class="wapper hid" id="im_feedback_success">
+    <h4 class="public_top">意见反馈<div class="rt_btn"></div>
+    </h4>
+    <p class="public_head col_pink"> <img src="/Path/images/icon4.png"
+                                          width="30" height="29">&nbsp;&nbsp;已收到您的反馈</p>
+    <p class="fk1 f_12">您的每一个问题我们都会非常重视，我们的进步离不开您的支持</p>
+    <div class="public_center"><img src="/Path/images/im_qr_part1.png"
+                                    width="168" height="165"></div>
+    <p class="public_center fk2">微信扫一扫关注小猪</p>
+    <a class="im_btn_pink" id="im_feedback_knowed">我知道了</a>
+</div>
+
+<style type="text/css" class="nc-style"></style>
+<link rel="stylesheet" type="text/css" href="/Path/css/Home.css">
+<script type="application/javascript" src="/Path/js/Home.js"></script>
+
+</body><!-- Google Tag Manager -->
+<!-- End Google Tag Manager -->
+</html>
