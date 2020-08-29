@@ -26,22 +26,22 @@ public class JurController {
 
     @RequestMapping("add")
     @ResponseBody
-    public int add(Jur jur){
-        int i = jurDao.addJur(jur);
-        return i;
+    public void add(Jur jur){
+        System.out.println("添加:"+jur);
+        jurDao.addJur(jur);
     }
 
     @RequestMapping("del")
     @ResponseBody
-    public int del(Integer jurId){
-        int i = jurDao.del(jurId);
-        return i;
+    public void del(Integer jurid){
+        System.out.println("jurid:"+jurid);
+        jurDao.del(jurid);
     }
 
     @RequestMapping("update")
     @ResponseBody
-    public int update(Jur jur){
-        int i = jurDao.update(jur);
-        return i;
+    public void update(Jur jur){
+        System.out.println("修改jur:"+jur);
+        jurDao.update(jur);
     }
 }

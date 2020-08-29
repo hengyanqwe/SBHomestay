@@ -18,12 +18,41 @@ public class AnController {
     AnDao ad;
 
     /**
-     * 按编号查询
+     * 按用户名密码登录查询
      * @param anNumber
      * @return
      */
     @ResponseBody
-    @RequestMapping("ByAnNumber")
+    @RequestMapping("login")
+    public An ByAnNumber(String anNumber,String anPassword){
+        System.out.println("anNumber:"+anNumber);
+        System.out.println("anPassword:"+anPassword);
+        return ad.login(anNumber,anPassword);
+    }
+
+    /**
+     * 按用户名登录查询
+     * @param anNumber
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("AnNumber")
+    public int AnNumber(String anNumber){
+        System.out.println("anNumber:"+anNumber);
+        List<An> ans = ad.AnNumber(anNumber);
+        if (ans.size()==0){
+            return 0;
+        }
+        return ans.size();
+    }
+
+    /**
+     * UserConfig使用anNumber查询
+     * @param anNumber
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("ByanNumber")
     public An ByAnNumber(String anNumber){
         return ad.ByAnNumber(anNumber);
     }
@@ -35,7 +64,6 @@ public class AnController {
     @ResponseBody
     @RequestMapping("query")
     public List<An> query(){
-        System.out.println(ad.query());
         return ad.query();
     }
 
@@ -47,7 +75,6 @@ public class AnController {
     @ResponseBody
     @RequestMapping("add")
     public int add(An an){
-        System.out.println(an);
         return ad.add(an);
     }
 
@@ -59,7 +86,6 @@ public class AnController {
     @ResponseBody
     @RequestMapping("update")
     public void udpate(An an){
-        System.out.println(an);
         ad.update(an);
     }
 

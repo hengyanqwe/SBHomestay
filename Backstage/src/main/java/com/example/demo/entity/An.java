@@ -1,10 +1,13 @@
 package com.example.demo.entity;
 
+import com.example.demo.dao.AnDao;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.List;
 
 public class An implements UserDetails {
     //账号编号
@@ -17,6 +20,16 @@ public class An implements UserDetails {
     Integer postid;
     //职员名称
     String postname;
+    //权限
+    String  jur;
+
+    public String getJur() {
+        return jur;
+    }
+
+    public void setJur(String jur) {
+        this.jur = jur;
+    }
 
     public An() {}
 
@@ -72,14 +85,18 @@ public class An implements UserDetails {
                 ", anPassword='" + anPassword + '\'' +
                 ", postid=" + postid +
                 ", postname='" + postname + '\'' +
+                ", jur=" + jur +
+                ", anDao=" + anDao +
                 '}';
     }
+
+    @Resource
+    AnDao anDao;
 
     //获取授权信息(权限)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-
-         return AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_Staff_Query,ROLE_Staff_postquery");
+         return AuthorityUtils.commaSeparatedStringToAuthorityList(this.jur);
     }
     //获取用户密码
     @Override

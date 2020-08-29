@@ -35,6 +35,7 @@ public class StaffController {
     @RequestMapping("add")
     @ResponseBody
     public int addStaff(Staff staff){
+        System.out.println("staff:"+staff);
         int i = staffDao.addStaff(staff);
         return i;
     }
