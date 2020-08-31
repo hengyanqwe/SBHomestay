@@ -57,7 +57,7 @@
     </div>
     <div class="o_mask" id="maskName" style="visibility: hidden"></div>
     <!--登录 模态框-->
-    <form action="/Home/login" method="post">
+    <form id="form1" method="post">
         <div id="userlogindialog" class="modal-box login_register_box ui-dialog-content ui-widget-content"
                 style="width: 600px;">
             <div class="w_698" style="width: auto;">
@@ -95,8 +95,8 @@
                                 </span>
                             </ul>
                             <!--http://localhost:8081/Home/mains?phone=123&pwd=321-->
-                            <button type="submit" class="r_input mt_10" id="orgBtn" style="width: 100%">登入</button>
-                            <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie"
+                            <input type="button" onclick="login()" class="r_input mt_10" id="orgBtn" style="width: 100%" value="登入">
+                            <div class="r_login_space clearfix"><span class="fl cur"><input class="ipt-checkbox2" type="checkbox" id="setcookie"
                                                                                              checked="checked">自动登录</span>
                             <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
                         </div>
@@ -248,7 +248,7 @@
                 <div class="result_error_tip err_tip_style" style="display: none;" id="tip_searchcity"></div>
             </div>
             <div class="search_column_r">
-						<span class="icon_place_box" id="calendar_btn_s">
+						<span class="icon_place_box" id="calendar_btn_s2">
 							<i class="iconfont search-icon"></i>
 						</span>
                 <input class="ipt_search_r" type="text" readonly="readonly" id="startenddate" name="startenddate" value="入住离开日期">
