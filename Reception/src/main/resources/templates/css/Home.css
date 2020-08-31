@@ -97,7 +97,7 @@
     /*比如在fixed定位中，z-index100大小的会覆盖在50大小的上面*/
     z-index: 102;
     /*用display的话没有物理宽高  便于js控制*/
-    /*visibility: hidden;先不要加  否则浏览器不会显示出来*/
+    /*visibility: hidden;先不要加  否则浏览器不会显示出来 */
     visibility: hidden;
     min-height: 120px;
     left: 390px;
