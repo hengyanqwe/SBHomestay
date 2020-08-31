@@ -17,7 +17,7 @@ import java.util.List;
 public class StaffController {
     @Resource
     StaffDao staffDao;
-    @Secured("ROLE_Staff_Query")
+    @Secured("ROLE_User_Query")
     @RequestMapping("query")
     @ResponseBody
     public List<Staff> query(){

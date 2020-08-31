@@ -1,8 +1,5 @@
 package com.example.demo.security;
 
-
-
-
 import com.example.demo.dao.AnDao;
 import com.example.demo.entity.An;
 import com.example.demo.entity.Jur;
@@ -29,16 +26,6 @@ public class UserConfig implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-      /*  String s1="";
-        System.out.println(ad.query());
-        List<Jur> byquery = ad.Byquery(s);
-        for (int i=0;i<byquery.size();i++){
-            Jur jur = byquery.get(i);
-            s+=jur.getJurfun();
-        }
-        System.out.println(s);*/
-
-
         An byAnNumber = as.ByAnNumber(s);
         if (byAnNumber==null){
             throw new UsernameNotFoundException("用户名不存在");

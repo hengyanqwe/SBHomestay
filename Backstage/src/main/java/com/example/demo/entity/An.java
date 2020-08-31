@@ -22,6 +22,8 @@ public class An implements UserDetails {
     String postname;
     //权限
     String  jur;
+    //权限名称
+    String jurName;
 
     public String getJur() {
         return jur;

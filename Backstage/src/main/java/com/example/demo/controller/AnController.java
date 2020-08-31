@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.AnDao;
 import com.example.demo.entity.An;
+import com.example.demo.entity.Jur;
+import org.apache.tomcat.util.compat.JreCompat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,6 +58,17 @@ public class AnController {
     public An ByAnNumber(String anNumber){
         return ad.ByAnNumber(anNumber);
     }
+
+    //按照权限名称查找子级权限
+
+    @ResponseBody
+    @RequestMapping("ByjurName")
+    public List<Jur> ByjurFun(String jurName){
+        List<Jur> jurs = ad.ByjurFun(jurName);
+        return jurs;
+    }
+
+
 
     /**
      * 查询
