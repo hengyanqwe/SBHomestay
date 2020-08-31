@@ -24,7 +24,7 @@ public class An implements UserDetails {
     String  jur;
     //权限名称
     String jurName;
-
+////
     public String getJur() {
         return jur;
     }

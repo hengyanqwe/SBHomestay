@@ -25,12 +25,7 @@ public interface AnDao extends tk.mybatis.mapper.common.Mapper<An> {
     //
     @Select("select j.jurId,j.jurName,j.jurFun from jur j,(select * from jur where jurName=#{jurName}) F where j.jurFuId=F.jurId")
     List<Jur> ByjurFun(String jurName);
-
-
-
-
-
-
+////
     //查询
     @Select("select a.*,p.* from an a,post p where a.postId=p.postId")
     List<An> query();

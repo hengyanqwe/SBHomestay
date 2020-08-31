@@ -23,7 +23,7 @@ public class PostController {
         List<Post> list = pd.query();
         return list;
     }
-
+/////
     @RequestMapping("add")
     @ResponseBody
     public int addPost(Post post){
