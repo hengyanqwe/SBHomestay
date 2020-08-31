@@ -11,4 +11,6 @@ spring:
     password: 123@qwe
     resources:
       static-locations: classpath:/MATE-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/;
+    thymeleaf:
+      cache: false
 

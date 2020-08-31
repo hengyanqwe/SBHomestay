@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -21,15 +21,16 @@
     <script src="/Path/js/tingyun-rum.js"></script>
     <link rel="stylesheet" type="text/css" href="/Path/css/xzcss_003.css">
     <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
-    <script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>
-    <script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>
-    <script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>
+    <!--<script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>-->
+    <!--<script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>-->
+    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>-->
     <link href="/Path/css/unifull.css" rel="stylesheet" type="text/css">
     <link href="/Path/css/Home.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 <!-- 首页搜索的两个情况sss -->
+<p th:text= "'账号-' + ${phone} + '-密码-' + ${password}"></p>
 <div>
     <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
     <div class="head_bar">
@@ -39,7 +40,7 @@
                 <li><a rel="nofollow" title="" class="show-register-box" href="https://www.xiaozhu.com/register?next=https%3A%2F%2Fwww.xiaozhu.com%2F">
                     注册 </a></li>
                 <li>·</li>
-                <li><a rel="nofollow" href="" class="logindialog">登录</a></li>
+                <li><a rel="nofollow" onclick="modalOpen()" class="logindialog">登录</a></li>
                 <li>·</li>
                 <li class="current">
                     <a href="#ongo" class="openTri_R marginR10">短租指南</a>
@@ -54,51 +55,56 @@
             </ul>
         </div>
     </div>
-    <div class="o_mask" id="maskName" style="display:none;"></div>
-    <div id="userlogindialog" class="login_register_box" style="display:none; width: 638px">
-        <div class="w_698">
-            <div class="r_colsed" id="closeUserLoginDialog"><span></span></div>
-            <div class="clearfix">
-                <div class="r_main_l_H">
-                    <ul class="r_tab clearfix">
-                        <li class=" tc cur underL1" style="width: 100%" id="generalLi">普通登录</li>
-                    </ul>
-                    <div id="generalLogin">
-                        <ul class="register_list">
-                            <li>
-                                <div class="h_30">&nbsp;</div>
-                                <div class="pr">
-                                    <div class="r_tel_ico"></div>
-                                    <input type="text" class="r_input_small" id="input-username" autocomplete="off" placeholder="手机号、邮箱"
-                                           disabled="true" style="width: 70%;">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="h_30">
-                                    <div class="r_error_tip" id="input-username-tip" style="display: none;"><span class="icon-wrong" id=""></span>手机号未注册</div>
-                                </div>
-                                <div class="pr">
-                                    <div class="r_password_ico"></div>
-                                    <input type="password" class="r_input_1" id="password" autocomplete="off" placeholder="密码"
-                                           disabled="true" style="width: 90%;">
-                                    <div class="h_30">
-                                        <div class="r_error_tip" id="password-tip" style="display: none;"><span class="ipt-text-pass"></span></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <span style="display:none" id="verify-show">
-                                <li></li>
-                            </span>
+    <div class="o_mask" id="maskName" style="visibility: hidden"></div>
+    <!--登录 模态框-->
+    <form action="/Home/login" method="get">
+        <div id="userlogindialog" class="modal-box login_register_box ui-dialog-content ui-widget-content"
+                style="width: 600px;">
+            <div class="w_698" style="width: auto;">
+                <div class="r_colsed" id="closeUserLoginDialog" onclick="modalClose()"><span></span></div>
+                <div class="clearfix">
+                    <div class="r_main_l_H">
+                        <ul class="r_tab clearfix">
+                            <li class=" tc cur underL1" style="width: 100%" id="generalLi" th:text="登录小猪">\</li>
                         </ul>
-                        <a href="###" class="r_input mt_10" id="orgBtn">登录</a>
-                        <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie"
-                                                                                         checked="checked">自动登录</span>
-                        <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
+                        <div id="generalLogin">
+                            <ul class="register_list">
+                                <li>
+                                    <div class="h_30">&nbsp;</div>
+                                    <div class="pr">
+                                        <div class="r_tel_ico"></div>
+                                        <input type="text" class="r_input_small" id="input-username" name="phone" autocommplete="off" placeholder="手机号、邮箱"
+                                                style="width: 90%;">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="h_30">
+                                        <div class="r_error_tip" id="input-username-tip" style="display: none;"><span class="icon-wrong" id=""></span>手机号未注册</div>
+                                    </div>
+                                    <div class="pr">
+                                        <div class="r_password_ico"></div>
+                                        <input type="password" class="r_input_1" id="password" name="password" autocomplete="off" placeholder="密码"
+                                                style="width: 90%;">
+                                        <div class="h_30">
+                                            <div class="r_error_tip" id="password-tip" style="display: none;"><span class="ipt-text-pass"></span></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <span style="display:none" id="verify-show">
+                                    <li></li>
+                                </span>
+                            </ul>
+                            <!--http://localhost:8081/Home/mains?phone=123&pwd=321-->
+                            <button type="submit" class="r_input mt_10" id="orgBtn" style="width: 100%">登入</button>
+                            <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie"
+                                                                                             checked="checked">自动登录</span>
+                            <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
     <div class="w_698 login_register_box " style="display:none;" id="registerDialog">
         <div class="r_colsed" id="closeRegiserDialog"><span></span></div>
         <div class="clearfix">
@@ -761,10 +767,8 @@
     </div>
 </div>
 
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all advantage1" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-1">
-    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><a
-            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
     <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="authenticationDialog" style="">
         <a href="#ongo" class="pop_close_v2 closeDialog"></a>
         <div class="xz_pop_T"><span class="icon_sfyz"></span>双方身份验证</div>
@@ -787,10 +791,8 @@
         </p>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all advantage2" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-2">
-    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">&nbsp;</span><a
-            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
     <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="transactionDialog" style="">
         <a href="#ongo" class="pop_close_v2 closeDialog"></a>
         <div class="xz_pop_T"><span class="icon_aqjy"></span>安全线上交易</div>
@@ -815,10 +817,8 @@
         </p>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all advantage3" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-3">
-    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-3" class="ui-dialog-title">&nbsp;</span><a
-            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
     <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="protectionDialog" style="">
         <a href="#ongo" class="pop_close_v2 closeDialog"></a>
         <div class="xz_pop_T"><span class="icon_jshd"></span>坚实保障后盾</div>
@@ -840,10 +840,8 @@
         </p>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all advantage4" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-4">
-    <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-4" class="ui-dialog-title">&nbsp;</span><a
-            href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
     <div class="index_pop indexdialog ui-dialog-content ui-widget-content" id="commentDialog" style="">
         <a href="#ongo" class="pop_close_v2 closeDialog"></a>
         <div class="xz_pop_T"><span class="icon_dpxy"></span>点评积累信用</div>
@@ -862,7 +860,8 @@
         </p>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<!--
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-5">
     <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-5" class="ui-dialog-title">&nbsp;</span><a
             href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
@@ -880,7 +879,7 @@
         </div>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-6">
     <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-6" class="ui-dialog-title">&nbsp;</span><a
             href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
@@ -889,7 +888,7 @@
         <div class="marginT46" id="vedio1Content" style="width:880px;height:528px;"> </div>
     </div>
 </div>
-<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 1000;"
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all" style="display: none; outline: currentcolor none 0px; z-index: 102;"
      tabindex="-1" role="dialog" aria-labelledby="ui-id-7">
     <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-7" class="ui-dialog-title">&nbsp;</span><a
             href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
@@ -898,6 +897,7 @@
         <div class="marginT46" id="vedio2Content" style="width:880px;height:528px;"> </div>
     </div>
 </div>
+-->
 
 <div class="suspension">
     <ul class="suspension_lf">

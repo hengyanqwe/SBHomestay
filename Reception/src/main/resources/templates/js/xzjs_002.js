@@ -18606,8 +18606,6 @@ $(function () {
 
         var dialog = $("#userlogindialog").parent('.ui-dialog');
         dialog.css({top: dialog.position().top + 15, position: 'absolute'});
-        //$('#userlogindialog').parent().removeClass('ui-widget-content');
-        //$('#userlogindialog').removeClass('ui-widget-content ui-dialog-content ui-dialog');
         $('.ui-widget-overlay').css({background: 'none repeat scroll 0 0 #000', opacity: '0.5'});
         $('.ui-dialog-titlebar').hide();
         $('#input-username').removeAttr("disabled");
