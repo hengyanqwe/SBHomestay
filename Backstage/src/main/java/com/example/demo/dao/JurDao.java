@@ -11,12 +11,12 @@ public interface JurDao {
     @Select("select * from jur")
     List<Jur> query();
 //    删除权限
-    @Delete("delete  from jur where jurId = #{jurId}")
-    int del(Integer jurId);
+    @Delete("delete  from jur where jurId = #{param1}")
+    int del(@Param("jurid") Integer jurid);
 //    添加权限
-    @Insert("insert into jur (jurName,jurFun,postId) values (#{jurName},#{jurFun},#{postId})")
+    @Insert("insert into jur (jurName,jurFun) values (#{jurname},#{jurfun})")
     int addJur(Jur jur);
 //    更改权限
-    @Update("update jur set jurName = #{jurName},jurFun = #{jurFun},postId = #{postId} where jurId = #{jurId}")
+    @Update("update jur set jurName = #{jurname} where jurId = #{jurid}")
     int update(Jur jur);
 }

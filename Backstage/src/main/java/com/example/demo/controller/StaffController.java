@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.StaffDao;
 import com.example.demo.entity.Staff;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,24 +17,25 @@ import java.util.List;
 public class StaffController {
     @Resource
     StaffDao staffDao;
-
+    @Secured("ROLE_Staff_Query")
     @RequestMapping("query")
     @ResponseBody
     public List<Staff> query(){
         List<Staff> list = staffDao.query();
         return list;
     }
-
+    @Secured("ROLE_Staff_postquery")
     @RequestMapping("postquery")
     @ResponseBody
     public List<Staff> postquery(Integer postId){
         List<Staff> list = staffDao.postquery(postId);
         return list;
     }
-
+    @Secured("ROLE_Staff_add")
     @RequestMapping("add")
     @ResponseBody
     public int addStaff(Staff staff){
+        System.out.println("staff:"+staff);
         int i = staffDao.addStaff(staff);
         return i;
     }

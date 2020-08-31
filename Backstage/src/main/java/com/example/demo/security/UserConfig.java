@@ -3,7 +3,9 @@ package com.example.demo.security;
 
 
 
+import com.example.demo.dao.AnDao;
 import com.example.demo.entity.An;
+import com.example.demo.entity.Jur;
 import com.example.demo.service.AnService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,12 +14,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.util.Collection;
 
 @Component
 public class UserConfig implements UserDetailsService {
     @Resource
-    AnService useService;
+    AnService as;
 
     /**
      * 根据用户名获取用户信息
@@ -28,20 +29,17 @@ public class UserConfig implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        System.out.println("UserConfig");
-        //实体类实现userdetails接口
-        /*Backstage_User user = backstage_userService.checkUserName(s);
-        if(user==null){
-            throw new UsernameNotFoundException("用户名不存在");
-        }else{
-            //设置登录用户所管理的路径,如果用户所拥有的全部后台路径
-            if(user.getEmpid()==0){
-                user.setUrls(menuInfoService.all());
-            }else{
-                user.setUrls(menuInfoService.usermune(user.getBackstage_userid()));
-            }
-        }*/
-        An byAnNumber = useService.ByAnNumber(s);
+      /*  String s1="";
+        System.out.println(ad.query());
+        List<Jur> byquery = ad.Byquery(s);
+        for (int i=0;i<byquery.size();i++){
+            Jur jur = byquery.get(i);
+            s+=jur.getJurfun();
+        }
+        System.out.println(s);*/
+
+
+        An byAnNumber = as.ByAnNumber(s);
         if (byAnNumber==null){
             throw new UsernameNotFoundException("用户名不存在");
         }

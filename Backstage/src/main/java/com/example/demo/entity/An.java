@@ -1,9 +1,13 @@
 package com.example.demo.entity;
 
+import com.example.demo.dao.AnDao;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.List;
 
 public class An implements UserDetails {
     //账号编号
@@ -12,8 +16,20 @@ public class An implements UserDetails {
     String anNumber;
     //密码
     String anPassword;
-    //职员编号
-    Integer postId;
+    //职员编号i
+    Integer postid;
+    //职员名称
+    String postname;
+    //权限
+    String  jur;
+
+    public String getJur() {
+        return jur;
+    }
+
+    public void setJur(String jur) {
+        this.jur = jur;
+    }
 
     public An() {}
 
@@ -45,12 +61,20 @@ public class An implements UserDetails {
         this.anPassword = anPassword;
     }
 
-    public Integer getPostId() {
-        return postId;
+    public Integer getPostid() {
+        return postid;
     }
 
-    public void setPostId(Integer postId) {
-        this.postId = postId;
+    public void setPostid(Integer postid) {
+        this.postid = postid;
+    }
+
+    public String getPostname() {
+        return postname;
+    }
+
+    public void setPostname(String postname) {
+        this.postname = postname;
     }
 
     @Override
@@ -59,14 +83,20 @@ public class An implements UserDetails {
                 "anId=" + anId +
                 ", anNumber='" + anNumber + '\'' +
                 ", anPassword='" + anPassword + '\'' +
-                ", postId=" + postId +
+                ", postid=" + postid +
+                ", postname='" + postname + '\'' +
+                ", jur=" + jur +
+                ", anDao=" + anDao +
                 '}';
     }
+
+    @Resource
+    AnDao anDao;
 
     //获取授权信息(权限)
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+         return AuthorityUtils.commaSeparatedStringToAuthorityList(this.jur);
     }
     //获取用户密码
     @Override

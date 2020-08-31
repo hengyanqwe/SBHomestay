@@ -45,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
                 .loginPage("/login.html")
                 .loginProcessingUrl("/login-check")
                 .usernameParameter("anNumber")
-                .passwordParameter("anPassWord")
+                .passwordParameter("anPassword")
                .successHandler((req, res, authentication) -> {
                    System.out.println("访问成功");
                     //获取数据
@@ -82,7 +82,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
                 //让Spring security放行所有preflight request
                 .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
                 //不做拦截
-                .antMatchers("/Path/*")
+                .antMatchers("/An/*")
                 .permitAll()
                 //.antMatchers("departmentinfo/add")
                 //.permitAll()
@@ -126,7 +126,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        System.out.println(1);
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         // 密码编码规则
         // new BCryptPasswordEncoder();数据中保存的密码是加密之后的密码
@@ -136,7 +135,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter  {
 
         auth.authenticationProvider(daoAuthenticationProvider);
     }
-
-
-
 }
