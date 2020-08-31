@@ -47,11 +47,11 @@
         </dependency>
 
         <!-- 数据库驱动 -->
-        <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.3</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>oracle</groupId>-->
+            <!--<artifactId>ojdbc6</artifactId>-->
+            <!--<version>11.2.0.3</version>-->
+        <!--</dependency>-->
 
         <!-- 通用Mapper -->
         <dependency>
@@ -88,15 +88,21 @@
             <version>5.1.44</version>
         </dependency>
         <!--security-->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>2.3.2.RELEASE</version>
-        </dependency>-->
+            <version>5.3.3.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
             <version>2.3.2.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

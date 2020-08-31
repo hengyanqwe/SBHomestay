@@ -25,4 +25,9 @@ public class HomeController {
         System.out.println("账号-" + phone + "-密码-" + password);
         return "/Home.html";
     }
+    @RequestMapping("main2")
+    public String main2(){
+
+        return "/Home2.html";
+    }
 }
