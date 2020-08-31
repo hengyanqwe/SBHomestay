@@ -23,13 +23,13 @@
     <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
     <!--<script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>-->
     <!--<script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>-->
-    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>s-->
+    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>-->
     <link href="/Path/css/unifull.css" rel="stylesheet" type="text/css">
     <link href="/Path/css/Home.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<!-- 首页搜索的两个情况sss -->
+<!-- 首页搜索的两个情况ss -->
 <p th:text= "'账号-' + ${phone} + '-密码-' + ${password}"></p>
 <div>
     <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
@@ -57,7 +57,7 @@
     </div>
     <div class="o_mask" id="maskName" style="visibility: hidden"></div>
     <!--登录 模态框-->
-    <form action="/Home/login" method="get">
+    <form action="/Home/login" method="post">
         <div id="userlogindialog" class="modal-box login_register_box ui-dialog-content ui-widget-content"
                 style="width: 600px;">
             <div class="w_698" style="width: auto;">
