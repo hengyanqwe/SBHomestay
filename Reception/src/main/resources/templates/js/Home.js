@@ -44,14 +44,15 @@ function login() {
         dataType: "json",//预期服务器返回的数据类型
         url: "/Home/login" ,//url
         data: $('#form1').serialize(),
+        // csrfmiddlewaretoken: '{{ csrf_token }}',
         success: function (result) {
             console.log(result);//打印服务端返回的数据(调试用)
             if (result.resultCode == 200) {
                 alert("SUCCESS");
             }
         },
-        error : function() {
-            alert("异常！");
+        error : function(result) {
+            alert("异常！--"+result);
         }
     });
 }
