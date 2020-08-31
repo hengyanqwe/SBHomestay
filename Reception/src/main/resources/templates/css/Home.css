@@ -79,3 +79,27 @@
     border-right: 1px solid #eee;
     padding-right: 50px;
 }
+
+/*模态框*/
+.modal-box {
+    /*绝顶定位 相对于当前浏览器*/
+    position: fixed;
+    /*width: 40rem;*/
+    width: 600px;
+    /*设置为白色背景  前期可以设置为其他颜色  方便观看*/
+    background-color: white;
+    top: 0;
+    margin-top: 8rem;
+    border-radius: 7px;
+    /*解决高度塌陷的问题*/
+    overflow: hidden;
+    /*z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面*/
+    /*比如在fixed定位中，z-index100大小的会覆盖在50大小的上面*/
+    z-index: 102;
+    /*用display的话没有物理宽高  便于js控制*/
+    /*visibility: hidden;先不要加  否则浏览器不会显示出来 */
+    visibility: hidden;
+    min-height: 120px;
+    left: 390px;
+}
+

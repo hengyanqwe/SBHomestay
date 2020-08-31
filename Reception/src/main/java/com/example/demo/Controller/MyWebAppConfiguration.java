@@ -14,6 +14,8 @@ public class MyWebAppConfiguration extends WebMvcConfigurerAdapter {
          * @Date： Create in 14:08 2017/12/20
          */
         registry.addResourceHandler("/Path/**").addResourceLocations("file:/E:/学习/S3/idea/SBHomestay/Reception/src/main/resources/templates/");
+        registry.addResourceHandler("/Portrait/**").addResourceLocations("file:/E:/project/portrait/");
+        registry.addResourceHandler("/House/**").addResourceLocations("file:/E:/project/house/");
         super.addResourceHandlers(registry);
 
     }
