@@ -23,14 +23,14 @@
     <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
     <!--<script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>-->
     <!--<script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>-->
-    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>s-->
+    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>-->
     <link href="/Path/css/unifull.css" rel="stylesheet" type="text/css">
     <link href="/Path/css/Home.css" rel="stylesheet" type="text/css">
     <script type="application/javascript" src="/Path/js/Home.js"></script>
 
 </head>
 <body>
-<!-- 首页搜索的两个情况sss -->
+<!-- 首页搜索的两个情况ss -->
 <p th:text= "'账号-' + ${phone} + '-密码-' + ${password}"></p>
 <div>
     <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
@@ -58,7 +58,7 @@
     </div>
     <div class="o_mask" id="maskName" style="visibility: hidden"></div>
     <!--登录 模态框-->
-    <form action="/Home/login" method="get">
+    <form id="form1" method="post">
         <div id="userlogindialog" class="modal-box login_register_box ui-dialog-content ui-widget-content"
                 style="width: 600px;">
             <div class="w_698" style="width: auto;">
@@ -96,8 +96,8 @@
                                 </span>
                             </ul>
                             <!--http://localhost:8081/Home/mains?phone=123&pwd=321-->
-                            <button type="submit" class="r_input mt_10" id="orgBtn" style="width: 100%">登入</button>
-                            <div class="r_login_space clearfix"><span class="fl cur "><input class="ipt-checkbox2" type="checkbox" id="setcookie"
+                            <input type="button" onclick="login()" class="r_input mt_10" id="orgBtn" style="width: 100%" value="登入">
+                            <div class="r_login_space clearfix"><span class="fl cur"><input class="ipt-checkbox2" type="checkbox" id="setcookie"
                                                                                              checked="checked">自动登录</span>
                             <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
                         </div>
