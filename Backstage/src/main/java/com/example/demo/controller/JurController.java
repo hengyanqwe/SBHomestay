@@ -29,7 +29,7 @@ public class JurController {
     @RequestMapping("ByJurFuId")
     @ResponseBody
     public List<Jur> ByJurFuId(){
-        List<Jur> jurs = jurDao.ByjurFuId();
+        List<Jur> jurs = jurDao.ByJurFuId();
         return jurs;
     }
 

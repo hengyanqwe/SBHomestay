@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Secured("ROLE_")
 @Controller
 @CrossOrigin
 @RequestMapping("An")
@@ -29,8 +28,6 @@ public class AnController {
     @ResponseBody
     @RequestMapping("login")
     public An ByAnNumber(String anNumber,String anPassword){
-        System.out.println("anNumber:"+anNumber);
-        System.out.println("anPassword:"+anPassword);
         return ad.login(anNumber,anPassword);
     }
 
@@ -42,7 +39,6 @@ public class AnController {
     @ResponseBody
     @RequestMapping("AnNumber")
     public int AnNumber(String anNumber){
-        System.out.println("anNumber:"+anNumber);
         List<An> ans = ad.AnNumber(anNumber);
         if (ans.size()==0){
             return 0;

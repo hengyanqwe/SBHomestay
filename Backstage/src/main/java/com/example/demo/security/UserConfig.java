@@ -32,7 +32,7 @@ public class UserConfig implements UserDetailsService {
         if (byAnNumber==null){
             throw new UsernameNotFoundException("用户名不存在");
         }
-        String[] list=byAnNumber.getJur().split(",");
+       /* String[] list=byAnNumber.getJur().split(",");
         System.out.print("list:");
         List<Jur> sss=new ArrayList();
         String str="";
@@ -52,7 +52,7 @@ public class UserConfig implements UserDetailsService {
                     str=j.getJurname();
                 }
             }
-        }
+        }*/
         System.out.println("byAnNumber:"+byAnNumber);
         return byAnNumber;
     }

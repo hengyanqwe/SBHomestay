@@ -59,7 +59,7 @@ public class Complaint {
     }
 
     @Override
-    public String toString() {  
+    public String toString() {
         return "complaint{" +
                 "comId=" + comId +
                 ", userId=" + userId +
