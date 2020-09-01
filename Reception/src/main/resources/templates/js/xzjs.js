@@ -1,21 +1,3 @@
-var topLevelDomain = "localhost:8081/Home/main";
-var domain = "www.xiaozhu.com";
-var webimIframUrl = window.location.protocol + "//xiaozhu.com/webim.html";
-var uploadImageUrl = "https://imageupload.xiaozhu.com/imgin4uploadify.php";
-var jciUrl = "https://jci.xiaozhustatic3.com";
-var webimYUI = "{{{webimYUI}}}";
-var webimV2 = "{{{webimV2}}}";
-var client_id_youku = '16edde5f79e61324';
-var lodgeUnitCenterDomain = "wirelesspub-lodgeunit.xiaozhu.com";
-
-document.domain = topLevelDomain;
-
-var hostArray = window.location.hostname.split('.');
-if (hostArray.length == 5 && hostArray[2] == 'partner') {
-    topLevelDomain = hostArray[1] + '.' + hostArray[2] + '.xiaozhu.com';
-} else if (hostArray.length == 4 && hostArray[1] == 'partner') {
-    topLevelDomain = hostArray[0] + '.' + hostArray[1] + '.xiaozhu.com';
-}
 
 if (typeof (window.jQuery) != "undefined") {
     if ($("#head_newmsg2")) {
@@ -254,9 +236,6 @@ var XZWebUrlWriter = {
     },
     getWebIm_RequestFastReplyUrl: function (userid) {
         return window.location.protocol + '//' + domain + '/webimRequest/getFastReply?userid=' + userid + '&_t=' + new Date().getTime();
-    },
-    getWebIm_FangDongSpecialLodgeUnitUrl: function (userid) {
-        return window.location.protocol + "//" + topLevelDomain + "/fangdong/" + userid + "/fangzi.html";
     },
     getWebIm_RequestRecommendLuUrl: function (userid) {
         return window.location.protocol + '//' + domain + '/webimRequest/getRecommendLuList?userid=' + userid;
@@ -1048,9 +1027,6 @@ var XZWebUrlWriter = {
     },
     getAjax_ValidNeedCount: function () {
         return window.location.protocol + '//' + domain + '/ajaxRequest/Ajax_ValidNeedCount';
-    },
-    getFront_Login: function (next) {
-        return window.location.protocol + '//' + topLevelDomain + '/login?next=' + next;
     },
     getAjax_MakeAgeInfo: function (year, month, day) {
         return window.location.protocol + '//' + domain + '/ajaxRequest/Ajax_MakeAgeInfo?year=' + year + '&month=' + month + '&day=' + day;
@@ -2399,8 +2375,6 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
         if ((startDate == '' || startDate == '请选择入住日期') && (endDate == '' || endDate == '请选择退房日期')) {
             startDate = '';
             endDate = '';
-            deleteCookie('startDate', '/', '.' + topLevelDomain);
-            deleteCookie('endDate', '/', '.' + topLevelDomain);
         } else if (startDate == '请选择入住日期' || startDate.length < 1) {
             $('#startdate').css('color', 'red').fadeOut('slow').fadeIn("slow").fadeOut("slow").fadeIn("slow", function () {
                 $(this).css('color', '')
@@ -2489,7 +2463,7 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
             defaulturl = searchLid + "-duanzufang-8/";
             if (paramStr)
                 defaulturl += "?";
-            jumpUrl = window.location.protocol + "//" + city + "." + topLevelDomain + "/" + defaulturl + paramStr;
+            jumpUrl = window.location.protocol + "//" + city + "." + "/" + defaulturl + paramStr;
             if (isOpenBlank == '1') {
                 openNewPage(jumpUrl);
             } else {
@@ -2501,7 +2475,7 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
             defaulturl += "-duanzufang-20/";
             if (paramStr)
                 defaulturl += "?";
-            jumpUrl = window.location.protocol + "//" + city + "." + topLevelDomain + "/" + defaulturl + paramStr;
+            jumpUrl = window.location.protocol + "//" + city + "." + "/" + defaulturl + paramStr;
             if (isOpenBlank == '1') {
                 openNewPage(jumpUrl);
             } else {
@@ -2517,7 +2491,7 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
                     var paramVal = encodeURIComponent(searchKey) + "_" + searchLid + "S-duanzufang-20/";
                 else if (searchPutKey)
                     var paramVal = encodeURIComponent(ignoreSpaces(searchPutKey)) + "_" + searchLid + "M-duanzufang-20/";
-                jumpUrl = window.location.protocol + "//" + city + '.' + topLevelDomain + "/" + paramVal + '?' + paramStr;
+                jumpUrl = window.location.protocol + "//" + city + '.' + "/" + paramVal + '?' + paramStr;
                 ;
                 if (isOpenBlank == '1') {
                     openNewPage(jumpUrl);
@@ -2529,7 +2503,7 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
                 if (searchPutKey) {
                     paramVal = encodeURIComponent(ignoreSpaces(searchPutKey)) + "_M-duanzufang-20/";
                 }
-                jumpUrl = window.location.protocol + "//" + city + '.' + topLevelDomain + "/" + paramVal + '?' + paramStr;
+                jumpUrl = window.location.protocol + "//" + city + '.' + "/" + paramVal + '?' + paramStr;
 
                 if (isOpenBlank == '1') {
                     openNewPage(jumpUrl);
@@ -2540,7 +2514,7 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
         } else {
             if (!searchLid && searchLid !== 'undefined' && searchPutKey) {
                 var paramVal = encodeURIComponent(ignoreSpaces(searchPutKey)) + "_M-duanzufang-20/";
-                jumpUrl = window.location.protocol + "//" + city + '.' + topLevelDomain + "/" + paramVal + '?' + paramStr;
+                jumpUrl = window.location.protocol + "//" + city + '.' + "/" + paramVal + '?' + paramStr;
                 if (isOpenBlank == '1') {
                     openNewPage(jumpUrl);
                 } else {
@@ -2551,14 +2525,14 @@ function searchCity(pageType)  //首页搜索部分回调这个方法,其他地�
                     var paramVal = encodeURIComponent(ignoreSpaces(searchKey)) + "_" + searchLid + "S-duanzufang-20/";
                 if (searchPutKey)
                     var paramVal = encodeURIComponent(ignoreSpaces(searchPutKey)) + "_" + searchLid + "M-duanzufang-20/";
-                jumpUrl = window.location.protocol + "//" + city + '.' + topLevelDomain + "/" + paramVal + '?' + paramStr;
+                jumpUrl = window.location.protocol + "//" + city + '.' + "/" + paramVal + '?' + paramStr;
                 if (isOpenBlank == '1') {
                     openNewPage(jumpUrl);
                 } else {
                     location.href = jumpUrl;
                 }
             } else {
-                jumpUrl = window.location.protocol + "//" + city + '.' + topLevelDomain + "/";
+                jumpUrl = window.location.protocol + "//" + city + '.' + "/";
                 if (isOpenBlank == '1') {
                     openNewPage(jumpUrl);
                 } else {
@@ -3681,11 +3655,6 @@ try {
                     }
                     $('.icon_searchandremove').show();
                     if (autoSearch) {
-                        /*
-                           var city = $("#selectcitydomain").val();
-                           var jumpUrl = "http://" + city + "." + topLevelDomain + "/?startDate=" + $("#startdate").val() + "&endDate=" + $("#enddate").val() ;
-                           location.href = jumpUrl;
-                           */
                         $('#filter_confirm').click();
                     }
                 }
@@ -4824,7 +4793,7 @@ var op = $('#actionname').val();
 
 function getSelectedCity(cityName, cityDomain, landmarkid, landmarkType, cityId, timeZone, isAbroad, pinyin) {
     if (op == "Front_Search" || op == 'Front_Search_Partner') {
-        window.location = window.location.protocol + '//' + cityDomain + '.' + topLevelDomain;
+        window.location = window.location.protocol + '//' + cityDomain + '.';
     } else {
         if (timeZone && $('#abroad').val() == '0') {
             $('.nation_name').eq(1).click();

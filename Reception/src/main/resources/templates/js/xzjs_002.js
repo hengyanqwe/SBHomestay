@@ -1,4 +1,4 @@
-var topLevelDomain = "localhost:8081/Home/main";
+
 var domain = "www.xiaozhu.com";
 var webimIframUrl = window.location.protocol + "//xiaozhu.com/webim.html";
 var uploadImageUrl = "https://imageupload.xiaozhu.com/imgin4uploadify.php";
@@ -7,15 +7,6 @@ var webimYUI = "{{{webimYUI}}}";
 var webimV2 = "{{{webimV2}}}";
 var client_id_youku = '16edde5f79e61324';
 var lodgeUnitCenterDomain = "wirelesspub-lodgeunit.xiaozhu.com";
-
-document.domain = topLevelDomain;
-
-var hostArray = window.location.hostname.split('.');
-if (hostArray.length == 5 && hostArray[2] == 'partner') {
-    topLevelDomain = hostArray[1] + '.' + hostArray[2] + '.xiaozhu.com';
-} else if (hostArray.length == 4 && hostArray[1] == 'partner') {
-    topLevelDomain = hostArray[0] + '.' + hostArray[1] + '.xiaozhu.com';
-}
 
 if (typeof (window.jQuery) != "undefined") {
     if ($("#head_newmsg2")) {
@@ -254,9 +245,6 @@ var XZWebUrlWriter = {
     },
     getWebIm_RequestFastReplyUrl: function (userid) {
         return window.location.protocol + '//' + domain + '/webimRequest/getFastReply?userid=' + userid + '&_t=' + new Date().getTime();
-    },
-    getWebIm_FangDongSpecialLodgeUnitUrl: function (userid) {
-        return window.location.protocol + "//" + topLevelDomain + "/fangdong/" + userid + "/fangzi.html";
     },
     getWebIm_RequestRecommendLuUrl: function (userid) {
         return window.location.protocol + '//' + domain + '/webimRequest/getRecommendLuList?userid=' + userid;
@@ -1048,9 +1036,6 @@ var XZWebUrlWriter = {
     },
     getAjax_ValidNeedCount: function () {
         return window.location.protocol + '//' + domain + '/ajaxRequest/Ajax_ValidNeedCount';
-    },
-    getFront_Login: function (next) {
-        return window.location.protocol + '//' + topLevelDomain + '/login?next=' + next;
     },
     getAjax_MakeAgeInfo: function (year, month, day) {
         return window.location.protocol + '//' + domain + '/ajaxRequest/Ajax_MakeAgeInfo?year=' + year + '&month=' + month + '&day=' + day;
@@ -2273,14 +2258,14 @@ function captchaInterceptors(busiKey, isReload, res, captchaAction, successActio
 
 }
 
-var webimIframUrl = window.location.protocol + '//' + topLevelDomain + '/webim.html';
+var webimIframUrl = window.location.protocol + '//' + '/webim.html';
 var currentUser = '';
 var userMD5 = null;
 var jscssVer = '/e20200107';
 var xzimLoadPath = window.location.protocol + '//' + domain + jscssVer;
 var xzimCssPath = xzimLoadPath + '/css/';
 var loadIMJS = ['common'];
-var loadURLSrc = jciUrl + jscssVer + '/imjs_v4.php';
+var loadURLSrc = jciUrl + jscssVer + '/imjs_v4.js';
 var DEBUG = false;
 var xiaozhuWebimCSS = 'webimV4.css';
 var webimReJoinTimeInterval = 30000;
@@ -2288,7 +2273,6 @@ var lockNoticeNoArr = ['MS100', 'MS200', 'MS400', 'MS500', 'MS600', 'MS700', 'MS
 var lockNoticeOpearteWord = '请下载小猪APP进行设置查看';
 var cleanNoticeNoArr = ['BJ100', 'BJ110', 'BJ120', 'BJ130', 'BJ140', 'BJ150', 'BJ160', 'BJ170', 'BJ180', 'BJ200', 'BJ210', 'BJ220', 'BJ230', 'BJ231', 'BJ240', 'BJ241', 'BJ242', 'BJ250', 'BJ251', 'BJ252', 'BJ260', 'BJ270', 'BJ280', 'BJ290', 'BJ300', 'BJ700', 'BJ800'];
 var cleanNoticeOpearteWord = '请下载小猪APP进行操作查看';
-document.domain = topLevelDomain;
 
 /**
  * jQuery Validation Plugin 1.9.0
@@ -13652,6 +13636,7 @@ var _0x51b7 = ['WP9oWQhcUSosgxDK', 'DuTaWOKBpSk0W6/dJ8k/W54MWQJdV0bcdCo7W6uzFSk2
     };
     _0x253a86();
 }(_0x51b7, 0x1de));
+
 var _0x3a19 = function (_0x59e74a, _0x51b7f3) {
     _0x59e74a = _0x59e74a - 0x0;
     var _0x3a19b6 = _0x51b7[_0x59e74a];
@@ -13739,7 +13724,7 @@ var _0x3a19 = function (_0x59e74a, _0x51b7f3) {
         var _0x10a124 = {}, _0x5a019a = _0x10a124['_'] = {},
             _0x5228ce = {'eventName': window[_0x3a19('0x627', 'MCTh')][_0x3a19('0x79c', 'bZT6')]}, _0xd7c1db = {};
         if (window['location'][_0x3a19('0x8f3', 'Garc')]['indexOf'](_0x3a19('0x7af', 'CrFX')) == -0x1) var _0x309685 = _0x3a19('0x79d', 'qe^('); else var _0x309685 = _0x3a19('0x960', 'NHJB');
-        typeof JSON !== _0x3a19('0x692', 'f6%H') && (JSON = {});
+        !(!(JSON = {}) || typeof JSON === _0x3a19('0x692', 'f6%H'));
         (function () {
             'use strict';
             var _0x22bcdc = /^[\],:{}\s]*$/, _0x35d9e7 = /\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g,
@@ -26632,7 +26617,7 @@ function getCookieUniqueIndex(name) {
 function setCookieUniqueIndex(name, value) {
     var exp = new Date();
     exp.setTime(exp.getTime() + 86400);
-    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=" + topLevelDomain;
+    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=";
 }
 
 // 动态加载css样式
