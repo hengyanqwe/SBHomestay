@@ -25,6 +25,13 @@ public class JurController {
         System.out.println(list);
         return list;
     }
+    //查询父级Id
+    @RequestMapping("ByJurFuId")
+    @ResponseBody
+    public List<Jur> ByJurFuId(){
+        List<Jur> jurs = jurDao.ByjurFuId();
+        return jurs;
+    }
 
     @RequestMapping("add")
     @ResponseBody
