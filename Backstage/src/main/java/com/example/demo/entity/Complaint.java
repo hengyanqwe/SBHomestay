@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
 import java.sql.Date;
-import java.sql.Time;
 
 public class Complaint {
     //投诉编号
