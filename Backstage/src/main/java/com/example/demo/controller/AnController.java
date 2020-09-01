@@ -4,6 +4,7 @@ import com.example.demo.dao.AnDao;
 import com.example.demo.entity.An;
 import com.example.demo.entity.Jur;
 import org.apache.tomcat.util.compat.JreCompat;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
-//
+
+@Secured("ROLE_")
 @Controller
 @CrossOrigin
 @RequestMapping("An")

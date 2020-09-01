@@ -8,6 +8,16 @@ public class Jur {
     String jurname;
 //    权限功能
     String jurfun;
+//    父级权限编号
+    Integer jurFuId;
+
+    public Integer getJurFuId() {
+        return jurFuId;
+    }
+
+    public void setJurFuId(Integer jurFuId) {
+        this.jurFuId = jurFuId;
+    }
 
     public Integer getJurid() {
         return jurid;
@@ -39,6 +49,7 @@ public class Jur {
                 "jurid=" + jurid +
                 ", jurname='" + jurname + '\'' +
                 ", jurfun='" + jurfun + '\'' +
+                ", jurFuId=" + jurFuId +
                 '}';
     }
 }

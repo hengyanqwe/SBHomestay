@@ -1,10 +1,7 @@
 package com.example.demo.dao;
 
-import com.example.demo.entity.complaint;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.example.demo.entity.Complaint;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -12,11 +9,11 @@ import java.util.List;
 public interface ComplaintDao {
 //    查看投诉
     @Select("select * from complaint")
-    List<complaint> query();
-//    根据用户查看投诉
-    @Select("select * from complaint where userId = #{userId}")
-    List<complaint> userquery(Integer userId);
-//    查看房源投诉
+    List<Complaint> query();
+//    查看被投诉房源
     @Select("select * from complaint where houseId = #{houseId}")
-    List<complaint> housequery(Integer houseId);
+    List<Complaint> housequery(Integer houseId);
+//    修改状态
+    @Update("update complaint set comstate=#{comstate} where comId=#{comId}")
+    int upd(Complaint complaint);
 }

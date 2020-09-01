@@ -21,6 +21,8 @@ public class JurController {
     @ResponseBody
     public List<Jur> query(){
         List<Jur> list = jurDao.query();
+        System.out.println(1111);
+        System.out.println(list);
         return list;
     }
 

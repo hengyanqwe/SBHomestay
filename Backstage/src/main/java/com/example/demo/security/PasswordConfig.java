@@ -2,7 +2,7 @@ package com.example.demo.security;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-////
+
 @Component
 public class PasswordConfig implements PasswordEncoder {
 

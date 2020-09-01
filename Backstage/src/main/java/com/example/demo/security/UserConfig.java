@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class UserConfig implements UserDetailsService {
@@ -29,6 +31,27 @@ public class UserConfig implements UserDetailsService {
         An byAnNumber = as.ByAnNumber(s);
         if (byAnNumber==null){
             throw new UsernameNotFoundException("用户名不存在");
+        }
+        String[] list=byAnNumber.getJur().split(",");
+        System.out.print("list:");
+        List<Jur> sss=new ArrayList();
+        String str="";
+        for (String l : list)
+        {
+            System.out.println(l);
+            str=l;
+            List<Jur> list2=new ArrayList<>();
+
+            for (Jur j:as.ByjurFun(str)){
+                sss.add(j);
+                if (as.ByjurFun(j.getJurname()).size()<=0)
+                {
+                    str=l;
+                    //break;
+                }else{
+                    str=j.getJurname();
+                }
+            }
         }
         System.out.println("byAnNumber:"+byAnNumber);
         return byAnNumber;

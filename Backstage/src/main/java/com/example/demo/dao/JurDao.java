@@ -14,9 +14,9 @@ public interface JurDao {
     @Delete("delete  from jur where jurId = #{param1}")
     int del(@Param("jurid") Integer jurid);
 //    添加权限
-    @Insert("insert into jur (jurName,jurFun) values (#{jurname},#{jurfun})")
+    @Insert("insert into jur (jurName,jurFun) values (#{jurname},#{jurfun},#{jurFuId})")
     int addJur(Jur jur);
-//    更改权限
-    @Update("update jur set jurName = #{jurname} where jurId = #{jurid}")
+//    更改权限名称
+    @Update("update jur set jurName = #{jurname},#{jurFun} where jurId = #{jurid}")
     int update(Jur jur);
 }

@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.dao.ComplaintDao;
-import com.example.demo.entity.complaint;
+import com.example.demo.entity.Complaint;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,22 +20,22 @@ public class ComplaintController {
 
     @RequestMapping("query")
     @ResponseBody
-    public List<complaint> query(){
-        List<complaint> list = complaintDao.query();
-        return list;
-    }
-
-    @RequestMapping("userquery")
-    @ResponseBody
-    public List<complaint> userquery(Integer userId){
-        List<complaint> list = complaintDao.userquery(userId);
+    public List<Complaint> query(){
+        List<Complaint> list = complaintDao.query();
         return list;
     }
 
     @RequestMapping("housequery")
     @ResponseBody
-    public List<complaint> housequery(Integer houseId){
-        List<complaint> list = complaintDao.housequery(houseId);
+    public List<Complaint> housequery(Integer houseId){
+        List<Complaint> list = complaintDao.housequery(houseId);
         return list;
+    }
+
+    @RequestMapping("update")
+    @ResponseBody 
+    public Integer upd(Complaint complaint){
+        int upd = complaintDao.upd(complaint);
+        return upd;
     }
 }
