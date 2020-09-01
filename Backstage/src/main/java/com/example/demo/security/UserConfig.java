@@ -26,23 +26,23 @@ public class UserConfig implements UserDetailsService {
      * @return 用户详细信息
      * @throws UsernameNotFoundException
      */
+    List<Jur> sss=new ArrayList<Jur>();
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         An byAnNumber = as.ByAnNumber(s);
         if (byAnNumber==null){
             throw new UsernameNotFoundException("用户名不存在");
         }
-       /* String[] list=byAnNumber.getJur().split(",");
+        String[] list=byAnNumber.getJur().split(",");
         System.out.print("list:");
-        List<Jur> sss=new ArrayList();
         String str="";
         for (String l : list)
         {
             System.out.println(l);
             str=l;
-            List<Jur> list2=new ArrayList<>();
-
-            for (Jur j:as.ByjurFun(str)){
+            jurfun(l);
+            System.out.println(sss);
+            /*for (Jur j:as.ByjurFun(str)){
                 sss.add(j);
                 if (as.ByjurFun(j.getJurname()).size()<=0)
                 {
@@ -51,10 +51,27 @@ public class UserConfig implements UserDetailsService {
                 }else{
                     str=j.getJurname();
                 }
-            }
-        }*/
+            }*/
+        }
+        for (Jur j:sss)
+        {
+            System.out.println(j.getJurname()+";"+j.getJurfun());
+            byAnNumber.setJur(byAnNumber.getJur()+","+j.getJurfun());
+        }
         System.out.println("byAnNumber:"+byAnNumber);
         return byAnNumber;
     }
-
+    public void jurfun(String str)
+    {
+        List<Jur> funlist= as.ByjurFun(str);
+        for (Jur j:funlist)
+        {
+            sss.add(j);
+            System.out.println(j+","+as.ByjurFun(j.getJurfun()));
+            if (as.ByjurFun(j.getJurfun()).size()!=0)
+            {
+                jurfun(j.getJurfun());
+            }
+        }
+    }
 }

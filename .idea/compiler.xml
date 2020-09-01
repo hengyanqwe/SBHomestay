@@ -12,6 +12,7 @@
         <module name="demo (2)" />
         <module name="Reception" />
         <module name="SBHomestay" />
+        <module name="SBHomestay2" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="Backstage" options="-parameters" />
       <module name="Reception" options="-parameters" />
       <module name="SBHomestay" options="-parameters" />
+      <module name="SBHomestay2" options="-parameters" />
       <module name="demo (1)" options="-parameters" />
       <module name="demo (2)" options="-parameters" />
     </option>
