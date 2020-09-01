@@ -10,6 +10,9 @@ public interface JurDao {
 //    查看权限
     @Select("select * from jur")
     List<Jur> query();
+//    查询父级权限
+    @Select("select * from jur where jurFuId=0")
+    List<Jur> ByjurFuId();
 //    删除权限
     @Delete("delete  from jur where jurId = #{param1}")
     int del(@Param("jurid") Integer jurid);
