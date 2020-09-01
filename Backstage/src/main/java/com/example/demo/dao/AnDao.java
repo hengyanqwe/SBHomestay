@@ -23,7 +23,7 @@ public interface AnDao extends tk.mybatis.mapper.common.Mapper<An> {
             "group by p.anId")
     An ByAnNumber(@Param("AnNumber") String AnNumber);
     //
-    @Select("select j.jurId,j.jurName,j.jurFun from jur j,(select * from jur where jurName=#{jurName}) F where j.jurFuId=F.jurId")
+    @Select("select j.jurId,j.jurName,j.jurFun from jur j,(select * from jur where jurFun=#{jurName}) F where j.jurFuId=F.jurId")
     List<Jur> ByjurFun(String jurName);
 
     //查询
