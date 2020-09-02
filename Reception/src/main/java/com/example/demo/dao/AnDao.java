@@ -11,7 +11,8 @@ public interface AnDao extends tk.mybatis.mapper.common.Mapper<An> {
 
     //登录
     @Select("select * from an where anNumber=#{AnNumber} and anPassword=#{anPassword}")
-    An login(String AnNumber, String anPassword);
+    List<An> login(String AnNumber, String anPassword);
+
     //账号查找
     @Select("select * from an where anNumber=#{AnNumber}")
     List<An> AnNumber(String AnNumber);
