@@ -1,39 +1,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <meta name="description" content="小猪是国内知名的短租民宿预订平台，更是一个具有人情味的社交住宿社区。截至2019年5月，小猪在全球共有超过80万间房源，分布在全球超过700座城市，房源包括特色民宿、精品客栈、城市公寓、轰趴别墅、海边小屋、花园洋房、森林木屋等，让您充分感受住宿之美、人情之暖、分享之乐。">
+    <meta name="keywords" content="租房,短租房,小猪短租,短租公寓,酒店式公寓,青年旅舍,小猪">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <meta content="no-transform " http-equiv="Cache-Control">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="renderer" content="webkit">
-    <meta name="keywords" content="租房,短租房,小猪短租,短租公寓,酒店式公寓,青年旅舍,小猪">
-    <meta name="description" content="小猪是国内知名的短租民宿预订平台，更是一个具有人情味的社交住宿社区。截至2019年5月，小猪在全球共有超过80万间房源，分布在全球超过700座城市，房源包括特色民宿、精品客栈、城市公寓、轰趴别墅、海边小屋、花园洋房、森林木屋等，让您充分感受住宿之美、人情之暖、分享之乐。">
+    <meta charset="UTF-8" />
+    <title>小猪民宿-住得更好，花得更少</title>
+
+    <script type="text/javascript" class="nc-required-js-1 nc-awsc-script" src="/Path/js/awsc.js"></script>
+    <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
+    <script async="" src="/Path/js/sensorsdata.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="/Path/js/Home.js"></script>
+    <script type="text/javascript" src="/Path/js/lazyload.js"></script>
+    <script type="text/javascript" src="/Path/js/jquery.js"></script>
+    <script src="/Path/js/collina.js" id="AWSC_uabModule"></script>
+    <script src="/Path/js/um.js" id="AWSC_umidPCModule"></script>
+    <script src="/Path/js/tingyun-rum.js"></script>
+    <script src="/Path/js/hm.js"></script>
+    <script src="/Path/js/hm.js"></script>
+
     <link rel="shortcut icon" href="/Path/images/favicon.png" type="image/vnd.microsoft.icon">
     <link rel="icon" href="/Path/images/favicon.png" type="image/vnd.microsoft.icon">
-    <title>小猪民宿-住得更好，花得更少</title>
-    <meta content="no-transform " http-equiv="Cache-Control">
-
-    <script type="text/javascript" src="/Path/js/jquery.js"></script>
-    <script src="/Path/js/um.js" id="AWSC_umidPCModule"></script>
-    <script src="/Path/js/collina.js" id="AWSC_uabModule"></script>
-    <script type="text/javascript" class="nc-required-js-1 nc-awsc-script" src="/Path/js/awsc.js"></script>
-    <script src="/Path/js/hm.js"></script>
-    <script async="" src="/Path/js/sensorsdata.js" charset="UTF-8"></script>
-    <script src="/Path/js/hm.js"></script>
-    <script src="/Path/js/tingyun-rum.js"></script>
     <link rel="stylesheet" type="text/css" href="/Path/css/xzcss_003.css">
-    <script id="captcha" type="text/javascript" src="/Path/js/nc.js"></script>
-    <!--<script src="/Path/js/imjs_v4.js" class="lazyload" charset="utf-8"></script>-->
-    <!--<script src="/Path/js/xzjs_002.js" class="lazyload" charset="utf-8"></script>-->
-    <!--<script src="/Path/js/xzjs.js" class="lazyload" charset="utf-8"></script>-->
     <link href="/Path/css/unifull.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
+    <link rel="stylesheet" type="text/css" href="/Path/css/Home.css">
+
+    <style type="text/css" class="nc-style"></style>
+
     <link href="/Path/css/Home.css" rel="stylesheet" type="text/css">
     <script type="application/javascript" src="/Path/js/Home.js"></script>
-
 </head>
 <body>
+<script type="text/javascript">
+
+</script>
+
 <!-- 首页搜索的两个情况ss -->
-<p th:text= "'账号-' + ${phone} + '-密码-' + ${password}"></p>
+<p th:text="${phone}" style=""></p>
+<p th:text="${password}" style=""></p>
+<input type="hidden" th:value="${error}" id="error">
 <div>
-    <link rel="stylesheet" type="text/css" href="/Path/css/xzcss.css">
     <div class="head_bar">
         <div class="head_bar_con">
             <a href="https://www.xiaozhu.com/" class="logo_index">小猪</a>
@@ -58,7 +70,10 @@
     </div>
     <div class="o_mask" id="maskName" style="visibility: hidden"></div>
     <!--登录 模态框-->
-    <form id="form1" method="post">
+    <form id="form1" action="login" method="post">
+        <input type="hidden"
+               th:name="${_csrf.parameterName}"
+               th:value="${_csrf.token}"/>
         <div id="userlogindialog" class="modal-box login_register_box ui-dialog-content ui-widget-content"
                 style="width: 600px;">
             <div class="w_698" style="width: auto;">
@@ -74,6 +89,7 @@
                                     <div class="h_30">&nbsp;</div>
                                     <div class="pr">
                                         <div class="r_tel_ico"></div>
+                                        <!--账号输入框-->
                                         <input type="text" class="r_input_small" id="input-username" name="phone" autocommplete="off" placeholder="手机号、邮箱"
                                                 style="width: 90%;">
                                     </div>
@@ -84,6 +100,7 @@
                                     </div>
                                     <div class="pr">
                                         <div class="r_password_ico"></div>
+                                        <!--密码输入框-->
                                         <input type="password" class="r_input_1" id="password" name="password" autocomplete="off" placeholder="密码"
                                                 style="width: 90%;">
                                         <div class="h_30">
@@ -95,10 +112,10 @@
                                     <li></li>
                                 </span>
                             </ul>
-                            <!--http://localhost:8081/Home/mains?phone=123&pwd=321-->
-                            <input type="button" onclick="login()" class="r_input mt_10" id="orgBtn" style="width: 100%" value="登入">
+                            <!--提交按钮-->
+                            <input type="submit"  class="r_input mt_10" id="orgBtn" style="width: 100%" value="登入">
                             <div class="r_login_space clearfix"><span class="fl cur"><input class="ipt-checkbox2" type="checkbox" id="setcookie"
-                                                                                             checked="checked">自动登录</span>
+                                                                                            checked="checked">自动登录</span>
                             <span class="fr col_gray"><a href="https://www.xiaozhu.com/findpwdbyphone">忘记密码?</a></span></div>
                         </div>
                     </div>
@@ -752,7 +769,6 @@
     <input type="hidden" name="actionName" id="actionName" value="Front_Index">
     <input type="hidden" name="xz_srf_token" id="xz_srf_token" value="d8c2bfc65d77bf6f2b2497e6e930e5a5">
 
-    <script type="text/javascript" src="/Path/js/lazyload.js"></script>
 </div>
 
 <input type="hidden" id="defaultCityShowStr" value="城市或目的地">
@@ -1023,9 +1039,6 @@
     <a class="im_btn_pink" id="im_feedback_knowed">我知道了</a>
 </div>
 
-<style type="text/css" class="nc-style"></style>
-<link rel="stylesheet" type="text/css" href="/Path/css/Home.css">
-<script type="application/javascript" src="/Path/js/Home.js"></script>
 
 </body><!-- Google Tag Manager -->
 <!-- End Google Tag Manager -->
