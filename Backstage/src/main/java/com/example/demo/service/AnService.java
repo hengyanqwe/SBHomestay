@@ -31,7 +31,7 @@ public class AnService {
         for (Jur j:funlist)
         {
             sss.add(j);
-//            System.out.println(j+","+as.ByjurFun(j.getJurfun()));
+//          System.out.println(j+","+as.ByjurFun(j.getJurfun()));
             if (ad.ByjurFun(j.getJurfun()).size()!=0)
             {
                 jurfun(j.getJurfun());

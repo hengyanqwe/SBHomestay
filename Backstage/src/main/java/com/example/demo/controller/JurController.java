@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dao.JurDao;
 import com.example.demo.entity.Jur;
 import com.example.demo.service.AnService;
+import com.example.demo.service.AnService2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,14 +19,17 @@ import java.util.List;
 public class JurController {
     @Resource
     JurDao jurDao;
-
+@Resource
+    AnService2 as2;
     @RequestMapping("query")
     @ResponseBody
     public List<Jur> query(){
-        List<Jur> list = jurDao.query();
+        /*List<Jur> list = jurDao.query();
         System.out.println(1111);
-        System.out.println(list);
-        return list;
+        System.out.println(list);*/
+        List<Jur> ls=jurDao.ByJurFuId();
+        as2.jurfun(ls);
+        return ls;
     }
     //查询父级Id
     @RequestMapping("ByJurFuId")
