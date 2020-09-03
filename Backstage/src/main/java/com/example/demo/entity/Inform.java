@@ -9,11 +9,11 @@ public class Inform {
 //    通知标题
     String informtitle;
 //    通知内容
-    String informCOntent;
+    String informContent;
 //    通知时间
     Date informDate;
 //    被通知人
-    Integer informPeople;
+    Integer userId;
 
     public Integer getInformId() {
         return informId;
@@ -31,12 +31,12 @@ public class Inform {
         this.informtitle = informtitle;
     }
 
-    public String getInformCOntent() {
-        return informCOntent;
+    public String getInformContent() {
+        return informContent;
     }
 
-    public void setInformCOntent(String informCOntent) {
-        this.informCOntent = informCOntent;
+    public void setInformContent(String informContent) {
+        this.informContent = informContent;
     }
 
     public Date getInformDate() {
@@ -47,12 +47,12 @@ public class Inform {
         this.informDate = informDate;
     }
 
-    public Integer getInformPeople() {
-        return informPeople;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setInformPeople(Integer informPeople) {
-        this.informPeople = informPeople;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -60,9 +60,9 @@ public class Inform {
         return "Inform{" +
                 "informId=" + informId +
                 ", informtitle='" + informtitle + '\'' +
-                ", informCOntent='" + informCOntent + '\'' +
+                ", informContent='" + informContent + '\'' +
                 ", informDate=" + informDate +
-                ", informPeople=" + informPeople +
+                ", userId=" + userId +
                 '}';
     }
 }

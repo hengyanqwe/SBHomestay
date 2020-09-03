@@ -9,14 +9,26 @@ public class Jur {
 //    权限功能
     String jurfun;
 //    父级权限编号
-    Integer jurFuId;
+    Integer jurfuid;
 
-    public Integer getJurFuId() {
-        return jurFuId;
+    public Jur(Integer jurid, String jurname, String jurfun, Integer jurfuid) {
+        this.jurid = jurid;
+        this.jurname = jurname;
+        this.jurfun = jurfun;
+        this.jurfuid = jurfuid;
     }
 
-    public void setJurFuId(Integer jurFuId) {
-        this.jurFuId = jurFuId;
+    public Jur() {
+    }
+
+    @Override
+    public String toString() {
+        return "Jur{" +
+                "jurid=" + jurid +
+                ", jurname='" + jurname + '\'' +
+                ", jurfun='" + jurfun + '\'' +
+                ", jurfuid=" + jurfuid +
+                '}';
     }
 
     public Integer getJurid() {
@@ -43,13 +55,11 @@ public class Jur {
         this.jurfun = jurfun;
     }
 
-    @Override
-    public String toString() {
-        return "Jur{" +
-                "jurid=" + jurid +
-                ", jurname='" + jurname + '\'' +
-                ", jurfun='" + jurfun + '\'' +
-                ", jurFuId=" + jurFuId +
-                '}';
+    public Integer getJurfuid() {
+        return jurfuid;
+    }
+
+    public void setJurfuid(Integer jurfuid) {
+        this.jurfuid = jurfuid;
     }
 }

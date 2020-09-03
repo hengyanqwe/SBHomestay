@@ -17,6 +17,6 @@ public interface PostDao {
     @Insert("insert into post (postName) values(#{postName})")
     int addPost(Post post);
 //    更改职位信息
-    @Update("update post set postName = #{post.postName} where postId = #{post.postId}")
+    @Update("update post set postName = #{post.postName},#{post.description} where postId = #{post.postId}")
     int update(Post post);
 }

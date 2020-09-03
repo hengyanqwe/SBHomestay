@@ -6,6 +6,8 @@ public class Post {
     Integer postid;
 //    职位名称
     String postname;
+    //角色说明
+    String description;
 
     public Integer getPostid() {
         return postid;
@@ -23,11 +25,20 @@ public class Post {
         this.postname = postname;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Post{" +
                 "postid=" + postid +
                 ", postname='" + postname + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

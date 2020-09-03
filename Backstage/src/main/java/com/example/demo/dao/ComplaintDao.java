@@ -14,6 +14,6 @@ public interface ComplaintDao {
     @Select("select * from complaint where houseId = #{houseId}")
     List<Complaint> housequery(Integer houseId);
 //    修改状态
-    @Update("update complaint set comstate=#{comstate} where comId=#{comId}")
-    int upd(Complaint complaint);
+    @Update("update complaint set comState=#{comState} where comId=#{comId}")
+    int upd(Integer comId,Integer comState);
 }

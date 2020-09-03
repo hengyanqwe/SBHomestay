@@ -13,6 +13,16 @@ public class Complaint {
     Date comDate;
     //投诉内容
     String comContent;
+    //投诉状态
+    Integer comState;
+
+    public Integer getComState() {
+        return comState;
+    }
+
+    public void setComState(Integer comState) {
+        this.comState = comState;
+    }
 
     public Complaint() {
         super();
@@ -60,12 +70,13 @@ public class Complaint {
 
     @Override
     public String toString() {
-        return "complaint{" +
+        return "Complaint{" +
                 "comId=" + comId +
                 ", userId=" + userId +
                 ", houseId=" + houseId +
                 ", comDate=" + comDate +
                 ", comContent='" + comContent + '\'' +
+                ", comState=" + comState +
                 '}';
     }
 }

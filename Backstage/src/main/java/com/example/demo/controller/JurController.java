@@ -2,12 +2,14 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.JurDao;
 import com.example.demo.entity.Jur;
+import com.example.demo.service.AnService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -30,6 +32,27 @@ public class JurController {
     @ResponseBody
     public List<Jur> ByJurFuId(){
         List<Jur> jurs = jurDao.ByJurFuId();
+        System.out.println();
+        return jurs;
+    }
+    //根据角色编号查询对应的父级权限(子级权限)
+    @Resource
+    AnService as;
+    @RequestMapping("ByJurPath")
+    @ResponseBody
+    public List<Jur> ByPostId(Integer postId){
+        List<Jur> jurs=jurDao.ByPostId(postId);
+        as.initjurs();
+        for (Jur j:jurs)
+        {
+            as.jurfun(j.getJurfun());
+        }
+        List<Jur> jurs2=as.getjurs();
+        //System.out.println(jurs2+";jurs2"+jurs2.size());
+        for (Jur j:jurs2){
+            jurs.add(j);
+        }
+        System.out.println(jurs+";\n"+jurs.size());
         return jurs;
     }
 
