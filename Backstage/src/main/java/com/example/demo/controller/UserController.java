@@ -37,4 +37,11 @@ public class UserController {
         int i = userDao.addUser(user);
         return i;
     }
+
+    @RequestMapping("update")
+    @ResponseBody
+    public int update(User user){
+        int i = userDao.update(user);
+        return i;
+    }
 }
