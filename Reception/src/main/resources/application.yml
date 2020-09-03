@@ -5,9 +5,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://192.168.43.27:3306/homestay?serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/homestay?serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: roots
+    username: root
     password: 123@qwe
     resources:
       static-locations: classpath:/MATE-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/;

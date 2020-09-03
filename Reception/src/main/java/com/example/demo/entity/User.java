@@ -17,7 +17,7 @@ public class User {
 //    真实姓名
     String userNames;
 //    身份证
-    Integer userIcard;
+    String userIcard;
 //    性别
     Integer userSex;
 //    出生日期
@@ -83,11 +83,11 @@ public class User {
         this.userNames = userNames;
     }
 
-    public Integer getUserIcard() {
+    public String getUserIcard() {
         return userIcard;
     }
 
-    public void setUserIcard(Integer userIcard) {
+    public void setUserIcard(String userIcard) {
         this.userIcard = userIcard;
     }
 
