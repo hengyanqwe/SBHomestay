@@ -7,33 +7,6 @@ $('.cmt_ul li').live('mouseover',function(){
     slide_show.siblings('div').hide();
     $(this).trigger('click');
 })
-//显示模态框
-function modalOpen() {
-    //获取模态框对象   getElementsByClassName获取到的是一个数组对象
-    let modal = document.getElementsByClassName("modal-box")[0];
-    let o_mask = document.getElementsByClassName("o_mask")[0];
-    //获取浏览器当前宽高
-    let documentWidth = window.innerWidth;
-    let documentHeight = window.innerHeight;
-    //获取模态框宽度
-    let modalWidth = modal.offsetWidth;
-    //模态框距离浏览器右侧的距离就是（浏览器宽度-模态框宽）/ 2.0
-    //注意，需要把结果转为字符串类型
-    modal.style.left = ((documentWidth - modalWidth) / 2.0).toString();
-    //设置为可见
-    modal.style.visibility = "visible";
-    o_mask.style.visibility = "visible";
-}
-
-//模态框关闭
-function modalClose() {
-    //获取模态框
-    let modal = document.getElementsByClassName("modal-box")[0];
-    let o_mask = document.getElementsByClassName("o_mask")[0];
-    //设置为不可见
-    modal.style.visibility = "hidden";
-    o_mask.style.visibility = "hidden";
-}
 
 $(function () {
     // 页面初始化生成验证码
@@ -43,18 +16,14 @@ $(function () {
         createCode('#loginCode');
     });
     // 登陆事件
-    $('#loginBtn').click(function () {
+    $('#loginModel').click(function () {
         login();
     });
     // 注册事件
-    $('#loginRegister').click(function () {
+    $('.loginRegister').click(function () {
         register();
     });
-})
-
-layui.use(['layer'],function () {
-    var layer = layui.layer;
-})
+});
 // 生成验证码
 function createCode(codeID) {
     var code = "";
@@ -97,7 +66,6 @@ function validateCode(inputID,codeID) {
     }
     return true;
 }
-
 // 登录流程
 function login() {
     layer.open({
@@ -111,24 +79,22 @@ function login() {
             if (!validateCode('#loginCard','#loginCode')){
                 //阻断提示
             }else {
-                var loginUsername = $('#loginUsername').val();
-                var loginPassword = $('#loginPassword').val();
-                var params = {};
-                params.loginUsername = loginUsername;
-                params.loginPassword = loginPassword;
+                var userPhone = $('#loginUsername').val();
+                var userPwd = $('#loginPassword').val();
+
                 var loginLoadIndex = layer.load(2);
                 $('#loginBtn').val("正在登录...");
                 $.ajax({
                     type:'post',
-                    url:window.location.protocol+'//'+window.location.host+'/security-web/login.do',
+                    url: '/Home/login',
                     dataType:'html',
-                    data:JSON.stringify(params),
+                    data:{userPhone:userPhone,userPwd:userPwd},
                     contentType:'application/json',
                     success:function (data) {
                         layer.close(loginLoadIndex);
                         var jsonData = JSON.parse(data);
                         if (jsonData.code == '999'){
-                            window.location.href = './static/templates/main.html';
+                            window.location.href = './static/templates/Home.html';
                         }
                     },
                     error:function () {
@@ -202,5 +168,3 @@ function register() {
         }
     })
 }
-
-

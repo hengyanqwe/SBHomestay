@@ -27,7 +27,7 @@ public class UserController {
     @RequestMapping("phonequery")
     @ResponseBody
     public List<User> phonequery(String userPhone,String userPwd){
-        List<User> list = userDao.phonequery(userPhone,userPwd);
+        List<User> list = userDao.login(userPhone,userPwd);
         return list;
     }
 

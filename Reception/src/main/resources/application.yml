@@ -10,6 +10,27 @@ spring:
     username: root
     password: 123@qwe
     resources:
-      static-locations: classpath:/MATE-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/;
+      static-locations: classpath:/MATE-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/static/images,classpath:/public/,classpath:/templates/;
     thymeleaf:
       cache: false
+  devtools:
+    restart:
+      enabled: true #设置开启热部署
+      additional-exclude: src/main/java #重启目录
+      exclude: templates/**
+  freemarker:
+    cache: false #页面不加载缓存，修改即时生效
+
+  thymeleaf:
+    cache: false  # 使用模板缓存
+    suffix: .html
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    mode: HTML5
+    check-template-location: true  #check-tempate-location: 检查模板路径是否存在
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 30MB

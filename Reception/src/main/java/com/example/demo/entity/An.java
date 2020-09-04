@@ -1,14 +1,11 @@
 package com.example.demo.entity;
 
 import com.example.demo.dao.AnDao;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.annotation.Resource;
 import java.util.Collection;
 
-public class An implements UserDetails {
+public class An {
     //账号编号
     Integer anId;
     //账号
@@ -85,46 +82,6 @@ public class An implements UserDetails {
                 ", postid=" + postid +
                 ", postname='" + postname + '\'' +
                 ", jur=" + jur +
-                ", anDao=" + anDao +
                 '}';
-    }
-
-    @Resource
-    AnDao anDao;
-
-    //获取授权信息(权限)
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-         return AuthorityUtils.commaSeparatedStringToAuthorityList(this.jur);
-    }
-    //获取用户密码
-    @Override
-    public String getPassword() {
-        return this.anPassword;
-    }
-    //获取用户账号
-    @Override
-    public String getUsername() {
-        return anNumber;
-    }
-    //当前账户是否过期
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-    //当前账户是否被锁定
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-    //当前账户认证是否过期
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-    //当前账户是否禁用
-    @Override
-    public boolean isEnabled() {
-        return true;
     }
 }
